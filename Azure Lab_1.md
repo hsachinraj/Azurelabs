@@ -74,49 +74,49 @@ and try deploying the same.
       
       <img src="./media/1.png" width="457" height="269" />
       
-      Upon login you should see there are no resource group created at the moment.
+6. Upon login you should see there are no resource group created at the moment.
 
       <img src="./media/image6.png" width="457" height="269" />
 
-5. From your Visual Studio, upon clicking “New”, you will get another window to configure the App
+7. From your Visual Studio, upon clicking “New”, you will get another window to configure the App
     Service Plan.
 
     <img src="./media/image7.png" width="318" height="356" />
 
-6. Upon filling out the required information, click on “Services” to add a
+8. Upon filling out the required information, click on “Services” to add a
     new service.
 
     <img src="./media/image8.png" width="476" height="353" />
 
-7. You will get a new window when clicked on services. Your web application
+9. You will get a new window when clicked on services. Your web application
     will have a SQL database in the future, so fill out the required
     information to configure SQL Server as shown-
 
     <img src="./media/image9.png" width="316" height="355" />
 
-8. Configure SQL database as shown-
+10. Configure SQL database as shown-
 
     <img src="./media/image10.png" width="346" height="392" />
 
-9. Finally, you should see the services upon configured-
+11. Finally, you should see the services upon configured-
 
     <img src="./media/image11.png" width="420" height="315" />
 
-10.  Click on create so that the deployment starts by spinning up all those
+12.  Click on create so that the deployment starts by spinning up all those
     resources on Azure. You can see at the bottom of the window which shows
     the status of your deployments.
 
     <img src="./media/image12.png" width="444" height="332" />
 
-11. Once successfully created, you should see the resources in your Visual
+13. Once successfully created, you should see the resources in your Visual
     Studio “Server Explorer”.
 
     <img src="./media/image13.png" width="471" height="338" />
 
-12. With the previous steps, you generated the Azure resources for your
+14. With the previous steps, you generated the Azure resources for your
     deployments.
 
-13. In your solution explorer, right click on the MyHealth.Web and click
+15. In your solution explorer, right click on the MyHealth.Web and click
  Publish. You will see Publish Web dialog box. The wizard shows you a
  list of available Publish Profiles. If you select Microsoft Azure App
  Service, you can see a list of available subscriptions and the resource
@@ -125,65 +125,65 @@ and try deploying the same.
 
     <img src="./media/image14.png" width="596" height="445" />
 
-14. After you select the resource group, the page that opens shows the
+16. After you select the resource group, the page that opens shows the
  connection information. The default parameters will populate the fields.
  You can modify these fields if required or leave it as it is. To test
  that the connection works correctly, click on Validate Connection.
 
     <img src="./media/image15.png" width="545" height="429" />
 
-15. In the **Settings** page, you can configure the deployment type
+17. In the **Settings** page, you can configure the deployment type
  depending on whether you require in a Debug/Release mode. You can check
  the box for using default connection string at run time.
 
     <img src="./media/image16.png" width="553" height="438" />
 
-16. On the last page, Preview, you can determine the changes that affect the
+18. On the last page, Preview, you can determine the changes that affect the
  Azure environment.
 
     <img src="./media/image17.png" width="474" height="374" />
 
-17. At last, click Publish. The **Output** window displays information about
+19. At last, click Publish. The **Output** window displays information about
  the deployment. When it’s completed, it displays a successful message.
 
     <img src="./media/image18.png" width="624" height="331" />
 
-18. You can see the website in the browser that will open.
+20. You can see the website in the browser that will open.
 
     <img src="./media/image19.png" width="624" height="335" />
 
-19. When you go back to your Azure portal and see, you have all the
+21. When you go back to your Azure portal and see, you have all the
  resources that was created and published from your Visual Studio.
 
     <img src="./media/image20.png" width="376" height="270" />
 
-20. Once the app is running fine, you can verify by doing some changes to
+22. Once the app is running fine, you can verify by doing some changes to
  the UI. So that you make sure that your app is actually running in Azure
  App Service. To open remote files, go to your server explorer from
  Visual Studio.
 
-21. Login to your Azure from Server Explorer. Expand the node Azure &gt; App
+23. Login to your Azure from Server Explorer. Expand the node Azure &gt; App
  Service &gt; YOUR RESOURCE GROUP &gt; YOUR WEBAPP &gt; Files &gt; Views
  &gt; Index.cshtml and replace the line as below
 
      `<li><a asp-controller="Account" asp-action="Login">Secret area</a></li> with <li><a asp-controller="Account" asp-action="Login">Secret area</a></li>`
 
-22. Save the changes and refresh the browser. You should see the changes
+24. Save the changes and refresh the browser. You should see the changes
  reflecting in the site now.
 
     <img src="./media/image21.png" width="624" height="333" />
 
-23. We can also remote debug our application from Azure within our Visual Studio.
+25. We can also remote debug our application from Azure within our Visual Studio.
 
  Put a breakpoint in your code and Right click and select Publish. You should see the new window as shown-
 
     <img src="./media/image22.png" width="465" height="349" />
 
-24. Publish the debug files so that you can show remote debugging-
+26. Publish the debug files so that you can show remote debugging-
 
     <img src="./media/image23.png" width="478" height="379" />
 
-25. Click on Publish. From your Visual Studio, go to **Debug** &gt; click
+27. Click on Publish. From your Visual Studio, go to **Debug** &gt; click
  **Attach to Process,** enter the azure websites URL along with its port
  and select dnx.exe process
 
@@ -191,7 +191,7 @@ and try deploying the same.
 
    <img src="./media/image25.png" width="459" height="311" />
 
-26. Finally, from your Server Explorer &gt; App Service node, attach the
+28. Finally, from your Server Explorer &gt; App Service node, attach the
  debugger. Refresh the browser and you would be hitting your breakpoint
  wherever you would have set. And that’s how you gonna remote debug
  ASP.NET apps on Azure. To learn more about remote debugging, see [Remote
