@@ -70,11 +70,11 @@ and try deploying the same.
 
       <img src="./media/image5.png" width="536" height="401" />
 
-      Also you can see, at this moment we have no resource group created on Azure. Log into Azure portal [here](https://portal.azure.com)
+      Log into Azure portal [here](https://portal.azure.com)
       
       <img src="./media/1.png" width="457" height="269" />
       
-      Upon login you should see there are no resource group at the moment.
+      Upon login you should see there are no resource group created at the moment.
 
       <img src="./media/image6.png" width="457" height="269" />
 
