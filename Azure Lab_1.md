@@ -70,7 +70,7 @@ and try deploying the same.
 
       <img src="./media/image5.png" width="536" height="401" />
 
- 5.Log into Azure portal [here](https://portal.azure.com)
+5. Log into Azure portal [here](https://portal.azure.com)
       
       <img src="./media/1.png" width="457" height="269" />
       
