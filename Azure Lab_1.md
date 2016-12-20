@@ -70,7 +70,7 @@ and try deploying the same.
 
       <img src="./media/image5.png" width="536" height="401" />
 
-      Log into Azure portal [here](https://portal.azure.com)
+ 5. Log into Azure portal [here](https://portal.azure.com)
       
       <img src="./media/1.png" width="457" height="269" />
       
@@ -78,7 +78,7 @@ and try deploying the same.
 
       <img src="./media/image6.png" width="457" height="269" />
 
-5. Upon clicking “New”, you will get another window to configure the App
+5. From your Visual Studio, upon clicking “New”, you will get another window to configure the App
     Service Plan.
 
     <img src="./media/image7.png" width="318" height="356" />
