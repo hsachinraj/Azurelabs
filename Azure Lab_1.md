@@ -1,4 +1,4 @@
-[Module 9: Deploy an ASP.NET web app in Azure App
+[Module 9: Deploy an ASP.NET Web App in Azure App
 Service](https://github.com/hsachinraj/DevOps-Immersion-Labs)
 
 In this module we would see how to deploy an ASP.NET Web Application to
@@ -28,7 +28,7 @@ Pre-Requisites to complete this lab:
 4.  Microsoft Web Deploy (download from
     [here](https://www.microsoft.com/en-us/download/details.aspx?id=43717))
 
-Since we already have the source code in the repo we could use the same
+Since we already have the source code in the [repo](https://github.com/hsachinraj/DevOps-Immersion-Labs/tree/master/source) we could use the same
 for our Azure App Service deployment. You can also create your own app
 and try deploying the same.
 
@@ -74,7 +74,11 @@ Resource group.
 <img src="./media/image5.png" width="536" height="401" />
 
 5. Also you can see, at this moment we have no resource group created on
-Azure-
+Azure. Log into Azure portal [here](https://portal.azure.com)
+
+<img src="./media/1.png" width="457" height="269" />
+
+Upon login you should see there are no resource group at the moment.
 
 <img src="./media/image6.png" width="457" height="269" />
 
