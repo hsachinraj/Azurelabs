@@ -185,7 +185,7 @@ and try deploying the same.
 
 27. Click on Publish. From your Visual Studio, go to **Debug** &gt; click
  **Attach to Process,** enter the azure websites URL along with its port
- and select dnx.exe process
+ and select **dnx.exe** process
 
    <img src="./media/image24.png" width="465" height="352" />
 
