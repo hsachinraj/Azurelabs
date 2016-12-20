@@ -1,4 +1,4 @@
-#[Module 9: Deploy an ASP.NET web app in Azure App Service](https://github.com/hsachinraj/DevOps-Immersion-Labs)
+#[Module 9: Deploy an ASP.NET Web App in Azure App Service](https://github.com/hsachinraj/DevOps-Immersion-Labs)
 
 In this module we would see how to deploy an ASP.NET Web Application to
 Azure App Service using Visual Studio 2015.
@@ -16,7 +16,7 @@ business processes.
 
 ##Pre-Requisites to complete this lab:
 
-1.  Visual Studio 2015 Update 3(download from
+1.  Visual Studio 2015 Update 3 (download from
     [here](https://www.visualstudio.com/downloads/))
 
 2.  Active Azure Account
@@ -70,7 +70,11 @@ and try deploying the same.
 
       <img src="./media/image5.png" width="536" height="401" />
 
-      Also you can see, at this moment we have no resource group created on Azure-
+      Also you can see, at this moment we have no resource group created on Azure. Log into Azure portal [here](https://portal.azure.com)
+      
+      <img src="./media/1.png" width="457" height="269" />
+      
+      Upon login you should see there are no resource group at the moment.
 
       <img src="./media/image6.png" width="457" height="269" />
 
