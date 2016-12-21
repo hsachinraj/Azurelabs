@@ -1,6 +1,6 @@
 #[Deploy an ASP.NET Web App in Azure App Service](https://github.com/hsachinraj/DevOps-Immersion-Labs)
 
-In this module we would see how to deploy an ASP.NET Web Application to
+In this lab we would see how to deploy an ASP.NET Web Application to
 Azure App Service using Visual Studio 2015.
 
 [App
