@@ -12,3 +12,7 @@ containers, the cloud tools in Visual Studio 2015 let you easily integrate with 
 On top of this, developers can also use the preview of [ASP.NET 5](http://weblogs.asp.net/scottgu/introducing-asp-net-5) in Visual Studio 2015. ASP.NET 5 is one of the most significant updates to the **ASP.NET** platform we’ve done.
 Because ASP.NET 5 runs on the **CoreCLR**, it can be deployed to your choice of platform, whether it’s **Linux, Mac or Windows**. On top of this, **ASP.NET 5** offers foundational improvements
 in rapid development, cloud configuration, dependency management and composability.
+
+It has the following labs:
+
+1. [Deploy an ASP.NET WebApp in Azure App Service](https://github.com/hsachinraj/Azurelabs/blob/master/Azure%20Lab_1.md)
