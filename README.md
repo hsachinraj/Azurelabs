@@ -1,6 +1,6 @@
 ## **Welcome to Azurelabs**
 
-![](http://irik.ir/uploads/img/1468652787online%20services.jpg)
+![](https://secure.aadcdn.partner.microsoftonline-p.cn/ests/2.1.5274.5/content/images/default_signin_illustration.png)
 
 Here are some quick start guides on **Azure tools for Visual Studio** that will guide you on how you can easily build, debug, deploy, diagnose, and managemulti-platform,
 scalable apps and services on Azure with Visual Studio.
