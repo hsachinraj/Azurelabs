@@ -5,13 +5,7 @@ using Visual Studio 2015.
 
 ###Overview
 
-The infrastructure for your application is typically made up of many
-components – maybe a virtual machine, storage account, and virtual
-network, or a web app, database, database server, and 3rd party
-services. You do not see these components as separate entities, instead
-you see them as related and interdependent parts of a single entity. You
-want to deploy, manage, and monitor them as a group. Azure Resource
-Manager enables you to work with the resources in your solution as a
+Azure Resource Manager enables you to work with the resources in your solution as a
 group. You can deploy, update, or delete all the resources for your
 solution in a single, coordinated operation. You use a template for
 deployment and that template can work for different environments such as
