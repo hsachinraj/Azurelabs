@@ -1,4 +1,4 @@
-#Deploy and Manage Azure Resources from your Visual Studio 2015
+#Deploy and Manage Azure Resources
 
 In this lab we would see how to **Deploy and Manage Azure Resources**
 using Visual Studio 2015.
