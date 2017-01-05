@@ -80,32 +80,33 @@ Please follow the below steps-
 
 **Note:** To add the resources, right click on the “resources” from your JSON Outline and select “Add New Resource”
 
-<img src="./media2/image5.png" width="274" height="322" />
+  <img src="./media2/image5.png" width="274" height="322" />
+  
 
-1.  Create an [**App Service
-    Plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
-    with the name **MyHealthClinicDemo**
+   1.  Create an [**App Service
+        Plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
+        with the name **MyHealthClinicDemo**
 
-    <img src="./media2/image6.png" width="471" height="355" />
+   <img src="./media2/image6.png" width="471" height="355" />
 
 1.  Create a
     [**WebApp**](https://docs.microsoft.com/en-in/azure/app-service-web/app-service-web-overview)
     with the name **MyHealthClinic** and map the App Service Plan to
     “MyHealthClinicDemo” that you created in the previous step
 
-<img src="./media/image7.png" width="561" height="420" />
+<img src="./media2/image7.png" width="561" height="420" />
 
 1.  Add “Application Settings for WebApps” with the name “connection
     strings” that is associated with your WebApp
 
-<img src="./media/image8.png" width="496" height="372" />
+<img src="./media2/image8.png" width="496" height="372" />
 
 1.  Create a SQL Server with the name “**myhealthclinic**” and add an
     instance of Azure SQL database with the name “**myhealthclinicdb**”
 
-    <img src="./media/image9.png" width="534" height="404" />
+    <img src="./media2/image9.png" width="534" height="404" />
 
-    <img src="./media/image10.png" width="527" height="395" />
+    <img src="./media2/image10.png" width="527" height="395" />
 
 <!-- -->
 
@@ -113,7 +114,7 @@ Please follow the below steps-
     parameters, variables and resources in your JSON Outline pane as
     shown below-
 
-<img src="./media/image11.png" width="242" height="375" />
+<img src="./media2/image11.png" width="242" height="375" />
 
 Now that we have all our resources ready, let’s deploy to Azure. Before
 deploying make sure you don’t have any resource group created so that
@@ -124,12 +125,12 @@ deployed from your Visual Studio.
 verify that you don’t have any your resource group created at this
 moment.
 
-<img src="./media/image12.png" width="466" height="379" />
+<img src="./media2/image12.png" width="466" height="379" />
 
 1.  Right click on the project from Solution Explorer &gt; click
     “Deploy” &gt; select “New Deployment”
 
-<img src="./media/image13.png" width="497" height="433" />
+<img src="./media2/image13.png" width="497" height="433" />
 
 1.  A new window appears; select the Subscription you want to
     deploy with. Click on the Resource group drop down and create “new”.
@@ -137,22 +138,22 @@ moment.
     choose a location you want this resource group to be deployed and
     click on create
 
-<img src="./media/image14.png" width="624" height="301" />
+<img src="./media2/image14.png" width="624" height="301" />
 
 1.  Click on edit parameters and fill out the required details as shown-
 
-<img src="./media/image15.png" width="624" height="244" />
+<img src="./media2/image15.png" width="624" height="244" />
 
 1.  Click on Deploy
 
-<img src="./media/image16.png" width="484" height="414" />
+<img src="./media2/image16.png" width="484" height="414" />
 
 1.  You will be prompted with a window to enter the db credentials.
     Remember the password that you had specified while you were editing
     the parameters in the step 10
 
-<img src="./media/image17.png" width="624" height="392" />
+<img src="./media2/image17.png" width="624" height="392" />
 
 1.  Post deployment, you will be seeing the resources in your Azure-
 
-<img src="./media/image18.png" width="624" height="354" />
+<img src="./media2/image18.png" width="624" height="354" />
