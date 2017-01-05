@@ -28,24 +28,27 @@ deployment.
 
 3.  Azure SDK for VS 2015 (download
     from [here](https://azure.microsoft.com/en-in/downloads/))
-
-<!-- -->
+    
+    -------------------------------------------------------------------------------------------------------------
+    
+Please follow the below steps-
+    
 
 1.  In Visual Studio, go to File &gt; New Project &gt; select “Cloud”
     and select “Azure Resource Group” and give a name “Azure Cloud
     Service”
 
-    <img src="./media/image1.png" width="585" height="359" />
+    <img src="./media2/image1.png" width="585" height="359" />
 
-2.  A new window would appear with a list of templates like WebApp+SQL,
+    2.  A new window would appear with a list of templates like WebApp+SQL,
     Logic App, Ubuntu Server etc. Because we want to create a custom
     resource group, we would choose “Blank Template” and click “OK”
 
-    <img src="./media/image2.png" width="559" height="421" />
+    <img src="./media2/image2.png" width="559" height="421" />
 
-1.  You can see the files that was created in Solution Explorer
+    .  You can see the files that was created in Solution Explorer
 
-    <img src="./media/image3.png" width="624" height="332" />
+    <img src="./media2/image3.png" width="624" height="332" />
 
     We have so many files created, let’s see what these files are.
 
@@ -72,7 +75,7 @@ deployment.
     file at this moment in your JSON Outline. Currently there are no
     resources added.
 
-    <img src="./media/image4.png" width="624" height="333" />
+    <img src="./media2/image4.png" width="624" height="333" />
 
 1.  You can add and modify existing resources to the JSON document from
     the JSON Outline pane. Let’s add the following resources to the
