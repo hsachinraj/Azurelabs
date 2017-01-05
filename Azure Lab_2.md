@@ -78,8 +78,7 @@ Please follow the below steps-
     the JSON Outline pane. Let’s add the following resources to the
     template as shown below-
 
-Note: To add the resources, right click on the “resources” from your
-JSON Outline and select “Add New Resource”
+**Note:** To add the resources, right click on the “resources” from your JSON Outline and select “Add New Resource”
 
 <img src="./media2/image5.png" width="274" height="322" />
 
