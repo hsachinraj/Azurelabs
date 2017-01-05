@@ -40,35 +40,35 @@ Please follow the below steps-
 
     <img src="./media2/image1.png" width="585" height="359" />
 
-    2.  A new window would appear with a list of templates like WebApp+SQL,
+2.  A new window would appear with a list of templates like WebApp+SQL,
     Logic App, Ubuntu Server etc. Because we want to create a custom
     resource group, we would choose “Blank Template” and click “OK”
 
     <img src="./media2/image2.png" width="559" height="421" />
 
-    .  You can see the files that was created in Solution Explorer
+3.  You can see the files that was created in Solution Explorer
 
     <img src="./media2/image3.png" width="624" height="332" />
 
     We have so many files created, let’s see what these files are.
 
-    **Deploy-AzureResourceGroup.ps1:** A PowerShell script that invokes
-    PowerShell commands to deploy to Azure Resource Manager
+       1. **Deploy-AzureResourceGroup.ps1:** A PowerShell script that invokes
+            PowerShell commands to deploy to Azure Resource Manager
 
-    **azuredeploy.json:** This defines the infrastructure that you want
-    to deploy to Azure and the parameters that you can provide during
-    the deployment. It also defines the dependencies between the
-    resources so they are deployed in the correct order.
+       2. **azuredeploy.json:** This defines the infrastructure that you want
+          to deploy to Azure and the parameters that you can provide during
+          the deployment. It also defines the dependencies between the
+          resources so they are deployed in the correct order.
 
-    **Azuredeployparameters.json:** A parameters file contains values
-    that the template needs. These are the values that would be passed
-    onto each deployment.
+       3. **Azuredeployparameters.json:** A parameters file contains values
+          that the template needs. These are the values that would be passed
+          onto each deployment.
 
-    **AzCopy.exe:** AzCopy is a Windows command-line utility designed
-    for copying data to and from Microsoft Azure Blob, File, and Table
-    storage using simple commands with optimal performance. You can copy
-    data from one object to another within your storage account, or
-    between storage accounts.
+       4. **AzCopy.exe:** AzCopy is a Windows command-line utility designed
+          for copying data to and from Microsoft Azure Blob, File, and Table
+          storage using simple commands with optimal performance. You can copy
+          data from one object to another within your storage account, or
+          between storage accounts.
 
 2.  Open azuredeploy.json file and also open “JSON Outline” window in
     your Visual Studio. You can notice the summary information of the
@@ -84,13 +84,13 @@ Please follow the below steps-
 Note: To add the resources, right click on the “resources” from your
 JSON Outline and select “Add New Resource”
 
-<img src="./media/image5.png" width="274" height="322" />
+<img src="./media2/image5.png" width="274" height="322" />
 
 1.  Create an [**App Service
     Plan**](https://docs.microsoft.com/en-us/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
     with the name **MyHealthClinicDemo**
 
-    <img src="./media/image6.png" width="471" height="355" />
+    <img src="./media2/image6.png" width="471" height="355" />
 
 1.  Create a
     [**WebApp**](https://docs.microsoft.com/en-in/azure/app-service-web/app-service-web-overview)
