@@ -83,13 +83,13 @@ Please follow the below steps-
   <img src="./media2/image5.png" width="274" height="322" />
   
   ------------------------------------------------------------------------------------
-    1. Create an **App ServicePlan** with the name **MyHealthClinicDemo**
+   1. Create an App Service Plan with the name MyHealthClinicDemo
 
-<img src="./media2/image6.png" width="471" height="355" />
+     <img src="./media2/image6.png" width="471" height="355" />
 
-    1. Create a **WebApp** with the name **MyHealthClinic** and map the App Service Plan to “MyHealthClinicDemo” that you created in            the previous step
+    2. Create a WebApp with the name MyHealthClinic and map the App Service Plan to “MyHealthClinicDemo” that you created in                    the previous step
 
-<img src="./media2/image7.png" width="561" height="420" />
+     <img src="./media2/image7.png" width="561" height="420" />
 
 1.  Add “Application Settings for WebApps” with the name “connection
     strings” that is associated with your WebApp
