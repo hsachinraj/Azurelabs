@@ -1,4 +1,4 @@
-Deploy and Manage Azure Resources from within your Visual Studio 2015
+#Deploy and Manage Azure Resources from your Visual Studio 2015
 
 In this lab we would see how to **Deploy and Manage Azure Resources**
 using Visual Studio 2015.
@@ -19,7 +19,7 @@ testing, staging, and production. Resource Manager provides security,
 auditing, and tagging features to help you manage your resources after
 deployment.
 
-Pre-requisites to complete this lab:
+##Pre-requisites to complete this lab:
 
 1.  Visual Studio 2015 Update 3 (download
     from [here](https://www.visualstudio.com/downloads/))
