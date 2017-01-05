@@ -33,16 +33,19 @@ Please follow the below steps-
     Service”
 
     <img src="./media2/image1.png" width="585" height="359" />
+    
 
 2.  A new window would appear with a list of templates like WebApp+SQL,
     Logic App, Ubuntu Server etc. Because we want to create a custom
     resource group, we would choose “Blank Template” and click “OK”
 
     <img src="./media2/image2.png" width="559" height="421" />
+    
 
 3.  You can see the files that was created in Solution Explorer
 
     <img src="./media2/image3.png" width="624" height="332" />
+    
 
     We have so many files created, let’s see what these files are.
 
