@@ -16,4 +16,4 @@ in rapid development, cloud configuration, dependency management and composabili
 It has the following labs:
 
 1. [Deploy an ASP.NET WebApp in Azure App Service](https://github.com/hsachinraj/Azurelabs/blob/master/Azure%20Lab_1.md)
-2. [Deploy and Manage Azure Resources from your Visual Studio 2015](https://github.com/hsachinraj/Azurelabs/blob/master/Azure%20Lab_2.md)
+2. [Deploy and Manage Azure Resources](https://github.com/hsachinraj/Azurelabs/blob/master/Azure%20Lab_2.md)
