@@ -85,36 +85,30 @@ Please follow the below steps-
   ------------------------------------------------------------------------------------
    1. Create an App Service Plan with the name MyHealthClinicDemo
 
-     <img src="./media2/image6.png" width="471" height="355" />
+       <img src="./media2/image6.png" width="471" height="355" />
 
     2. Create a WebApp with the name MyHealthClinic and map the App Service Plan to “MyHealthClinicDemo” that you created in                    the previous step
 
-     <img src="./media2/image7.png" width="561" height="420" />
+       <img src="./media2/image7.png" width="561" height="420" />
 
-1.  Add “Application Settings for WebApps” with the name “connection
-    strings” that is associated with your WebApp
+    3. Add “Application Settings for WebApps” with the name “connection strings” that is associated with your WebApp
 
-<img src="./media2/image8.png" width="496" height="372" />
+      <img src="./media2/image8.png" width="496" height="372" />
 
-1.  Create a SQL Server with the name “**myhealthclinic**” and add an
-    instance of Azure SQL database with the name “**myhealthclinicdb**”
+    4. Create a SQL Server with the name myhealthclinic and add an instance of Azure SQL database with the name myhealthclinicdb
 
-    <img src="./media2/image9.png" width="534" height="404" />
+     <img src="./media2/image9.png" width="534" height="404" />
 
-    <img src="./media2/image10.png" width="527" height="395" />
+     <img src="./media2/image10.png" width="527" height="395" />
 
-<!-- -->
 
-1.  Upon adding all these resources, you should be able to see the
-    parameters, variables and resources in your JSON Outline pane as
+
+    5. Upon adding all these resources, you should be able to see the parameters, variables and resources in your JSON Outline pane as
     shown below-
 
-<img src="./media2/image11.png" width="242" height="375" />
+      <img src="./media2/image11.png" width="242" height="375" />
 
-Now that we have all our resources ready, let’s deploy to Azure. Before
-deploying make sure you don’t have any resource group created so that
-you can verify post deployment that these resources were actually
-deployed from your Visual Studio.
+###Now that we have all our resources ready, let’s deploy to Azure. Before deploying make sure you don’t have any resource group created so that you can verify post deployment that these resources were actually deployed from your Visual Studio.
 
 7. Login to Azure Portal from [here](https://portal.azure.com) and
 verify that you don’t have any your resource group created at this
