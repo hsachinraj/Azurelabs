@@ -3,7 +3,7 @@
 In this lab we would see how to **Deploy and Manage Azure Resources**
 using Visual Studio 2015.
 
-**Overview-**
+###Overview
 
 The infrastructure for your application is typically made up of many
 components – maybe a virtual machine, storage account, and virtual
