@@ -3,7 +3,7 @@
 In this lab we would see how to **Deploy and Manage Azure Resources**
 using Visual Studio 2015.
 
-###Overview
+##Overview
 
 Azure Resource Manager enables you to work with the resources in your solution as a
 group. You can deploy, update, or delete all the resources for your
@@ -23,9 +23,9 @@ deployment.
 3.  Azure SDK for VS 2015 (download
     from [here](https://azure.microsoft.com/en-in/downloads/))
     
-    -------------------------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------------
     
-Please follow the below steps-
+###Please follow the below steps-
     
 
 1.  In Visual Studio, go to File &gt; New Project &gt; select “Cloud”
@@ -78,7 +78,7 @@ Please follow the below steps-
     the JSON Outline pane. Let’s add the following resources to the
     template as shown below-
 
-**Note:** To add the resources, right click on the “resources” from your JSON Outline and select “Add New Resource”
+  **Note:** To add the resources, right click on the “resources” from your JSON Outline and select “Add New Resource”
 
   <img src="./media2/image5.png" width="274" height="322" />
   
@@ -103,7 +103,7 @@ Please follow the below steps-
 
 
 
-    5. Upon adding all these resources, you should be able to see the parameters, variables and resources in your JSON Outline pane as
+    5. Upon adding all these resources, you should be able to see the parameters, variables and resources in your **JSON Outline pane** as
     shown below-
 
       <img src="./media2/image11.png" width="242" height="375" />
