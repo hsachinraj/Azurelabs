@@ -69,7 +69,7 @@ deployment.
     <img src="./media2/image4.png" width="624" height="333" />
 
 8.  You can add and modify existing resources to the JSON document from
-    the JSON Outline pane. Let’s add the following resources to the
+    the **JSON Outline pane**. Let’s add the following resources to the
     template as shown below-
 
     ><b>Note</b>: To add the resources, right click on the “resources” from your JSON Outline and select “Add New Resource”
