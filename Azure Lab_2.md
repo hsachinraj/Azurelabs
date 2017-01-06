@@ -102,24 +102,21 @@ deployment.
      <img src="./media2/image10.png" width="527" height="395" />
 
 
-
-    5. Upon adding all these resources, you should be able to see the parameters, variables and resources in your **JSON Outline pane** as
-    shown below-
+    5. Upon adding all these resources, you should be able to see the parameters, variables and resources in your **JSON Outline pane**  as shown below-
 
       <img src="./media2/image11.png" width="242" height="375" />
 
 ###Now that we have all our resources ready, let’s deploy to Azure. Before deploying make sure you don’t have any resource group created so that you can verify post deployment that these resources were actually deployed from your Visual Studio.
 
-7. Login to Azure Portal from [here](https://portal.azure.com) and
-verify that you don’t have any your resource group created at this
+7. Login to Azure Portal from [here](https://portal.azure.com) and verify that you don’t have any your resource group created at this
 moment.
 
-<img src="./media2/image12.png" width="466" height="379" />
+   <img src="./media2/image12.png" width="466" height="379" />
 
 1.  Right click on the project from Solution Explorer &gt; click
     “Deploy” &gt; select “New Deployment”
 
-<img src="./media2/image13.png" width="497" height="433" />
+    <img src="./media2/image13.png" width="497" height="433" />
 
 1.  A new window appears; select the Subscription you want to
     deploy with. Click on the Resource group drop down and create “new”.
@@ -127,22 +124,22 @@ moment.
     choose a location you want this resource group to be deployed and
     click on create
 
-<img src="./media2/image14.png" width="624" height="301" />
+    <img src="./media2/image14.png" width="624" height="301" />
 
 1.  Click on edit parameters and fill out the required details as shown-
 
-<img src="./media2/image15.png" width="624" height="244" />
+    <img src="./media2/image15.png" width="624" height="244" />
 
 1.  Click on Deploy
 
-<img src="./media2/image16.png" width="484" height="414" />
+    <img src="./media2/image16.png" width="484" height="414" />
 
 1.  You will be prompted with a window to enter the db credentials.
     Remember the password that you had specified while you were editing
     the parameters in the step 10
 
-<img src="./media2/image17.png" width="624" height="392" />
+    <img src="./media2/image17.png" width="624" height="392" />
 
 1.  Post deployment, you will be seeing the resources in your Azure-
 
-<img src="./media2/image18.png" width="624" height="354" />
+    <img src="./media2/image18.png" width="624" height="354" />
