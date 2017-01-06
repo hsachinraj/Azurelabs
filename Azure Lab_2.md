@@ -129,7 +129,7 @@ deployment.
 
 19.  You will be prompted with a window to enter the db credentials.
     Remember the password that you had specified while you were editing
-    the parameters in the step 14
+    the parameters in step 14
 
     <img src="./media2/image17.png" width="624" height="392" />
 
