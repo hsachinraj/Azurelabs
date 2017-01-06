@@ -72,7 +72,7 @@ deployment.
     the JSON Outline pane. Let’s add the following resources to the
     template as shown below-
 
-    >Note: To add the resources, right click on the “resources” from your JSON Outline and select “Add New Resource”
+    ><b>Note</b>: To add the resources, right click on the “resources” from your JSON Outline and select “Add New Resource”
 
     <img src="./media2/image5.png" width="274" height="322" />
   
@@ -96,7 +96,7 @@ deployment.
      <img src="./media2/image10.png" width="527" height="395" />
 
 
-13. Upon adding all these resources, you should be able to see the parameters, variables and resources in your **JSON Outline pane**  as shown below-
+13. Upon adding all these resources, you should be able to see the parameters, variables and resources in your **JSON Outline pane**  as shown below
 
     <img src="./media2/image11.png" width="242" height="375" />
 
@@ -120,7 +120,7 @@ deployment.
 
     <img src="./media2/image14.png" width="624" height="301" />
 
-17.  Click on edit parameters and fill out the required details as shown-
+17.  Click on edit parameters and fill out the required details as shown
 
     <img src="./media2/image15.png" width="624" height="244" />
 
@@ -134,6 +134,6 @@ deployment.
 
     <img src="./media2/image17.png" width="624" height="392" />
 
-20.  Post deployment, you will be seeing the resources in your Azure-
+20.  Post deployment, you will be seeing the resources in your Azure
 
     <img src="./media2/image18.png" width="624" height="354" />
