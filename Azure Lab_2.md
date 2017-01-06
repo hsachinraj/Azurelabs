@@ -21,12 +21,9 @@ deployment.
 2.  Active Azure Account
 
 3.  Azure SDK for VS 2015 (download
-    from [here](https://azure.microsoft.com/en-in/downloads/))
-    
- -------------------------------------------------------------------------------------------------------------
-    
-###Please follow the below steps-
-    
+    from [here](https://azure.microsoft.com/en-in/downloads/))   
+  
+###Please follow the below steps    
 
 1.  In Visual Studio, go to File &gt; New Project &gt; select “Cloud”
     and select “Azure Resource Group” and give a name “Azure Cloud
@@ -46,7 +43,6 @@ deployment.
 
     <img src="./media2/image3.png" width="624" height="332" />
     
-
     We have so many files created, let’s see what these files are.
 
        1. **Deploy-AzureResourceGroup.ps1:** A PowerShell script that invokes
@@ -78,12 +74,12 @@ deployment.
     the JSON Outline pane. Let’s add the following resources to the
     template as shown below-
 
-    >>Note: To add the resources, right click on the “resources” from your JSON Outline and select “Add New Resource”
+     >Note: To add the resources, right click on the “resources” from your JSON Outline and select “Add New Resource”
 
     <img src="./media2/image5.png" width="274" height="322" />
   
-  ------------------------------------------------------------------------------------
-   1. Create an App Service Plan with the name MyHealthClinicDemo
+ 
+    1. Create an App Service Plan with the name MyHealthClinicDemo
 
        <img src="./media2/image6.png" width="471" height="355" />
 
@@ -97,21 +93,21 @@ deployment.
 
     4. Create a SQL Server with the name myhealthclinic and add an instance of Azure SQL database with the name myhealthclinicdb
 
-     <img src="./media2/image9.png" width="534" height="404" />
+      <img src="./media2/image9.png" width="534" height="404" />
 
-     <img src="./media2/image10.png" width="527" height="395" />
+      <img src="./media2/image10.png" width="527" height="395" />
 
 
-    5. Upon adding all these resources, you should be able to see the parameters, variables and resources in your **JSON Outline pane**  as shown below-
+5. Upon adding all these resources, you should be able to see the parameters, variables and resources in your **JSON Outline pane**  as shown below-
 
-      <img src="./media2/image11.png" width="242" height="375" />
+    <img src="./media2/image11.png" width="242" height="375" />
 
-###Now that we have all our resources ready, let’s deploy to Azure. Before deploying make sure you don’t have any resource group created so that you can verify post deployment that these resources were actually deployed from your Visual Studio.
+     Now that we have all our resources ready, let’s deploy to Azure. Before deploying make sure you don’t have any resource group created  so that you can verify post deployment that these resources were actually deployed from your Visual Studio.
 
 7. Login to Azure Portal from [here](https://portal.azure.com) and verify that you don’t have any your resource group created at this
-moment.
+ moment.
 
-   <img src="./media2/image12.png" width="466" height="379" />
+    <img src="./media2/image12.png" width="466" height="379" />
 
 1.  Right click on the project from Solution Explorer &gt; click
     “Deploy” &gt; select “New Deployment”
