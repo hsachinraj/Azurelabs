@@ -29,7 +29,7 @@ deployment.
     and select “Azure Resource Group” and give a name “Azure Cloud
     Service”
     
-    <img src="./Lab2/images/image1.png" width="585" height="359" />
+    <img src="/Azurelabs/Labs/Lab2/images/image1.png" width="585" height="359" />
     
 5.  A new window would appear with a list of templates like WebApp+SQL,
     Logic App, Ubuntu Server etc. Because we want to create a custom
