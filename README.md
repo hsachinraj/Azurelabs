@@ -15,5 +15,5 @@ in rapid development, cloud configuration, dependency management and composabili
 
 It has the following labs:
 
-1. [Deploy an ASP.NET WebApp in Azure App Service](https://github.com/hsachinraj/Azurelabs/blob/master/Labs/Lab_1.md)
-2. [Deploy and Manage Azure Resources](https://github.com/hsachinraj/Azurelabs/blob/master/Labs/Lab_2.md)
+1. [Deploy an ASP.NET WebApp in Azure App Service](https://github.com/hsachinraj/Azurelabs/blob/master/Labs/Lab1/Lab1.md)
+2. [Deploy and Manage Azure Resources](https://github.com/hsachinraj/Azurelabs/blob/master/Labs/Lab2/Lab2.md)
