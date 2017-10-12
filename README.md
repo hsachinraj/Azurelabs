@@ -13,3 +13,13 @@ In this lab we are going to discuss about **Deploying Asp.Net application to Azu
    - If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/) program and get $25 per month of Azure credits.
 
 - Use the [Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net/) to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the **PartsUnlimited** template to follow the hands-on-labs.
+
+1. From your browser, go to [VSTSDemoGenerator](https://vstsdemogenerator.azurewebsites.net)
+
+2. Provide VSTS account name and PAT.
+
+   ![](.\images\1.png)
+
+3. Provide a name for the Team Project and Select **PartsUnlimited** template from the list.
+
+   ![](.\images\2.png)
