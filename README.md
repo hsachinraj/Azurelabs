@@ -18,8 +18,8 @@ In this lab we are going to discuss about **Deploying Asp.Net application to Azu
 
 2. Provide VSTS account name and PAT.
 
-   ![](.\images\1.png)
+   <img src="images/1.png" >
 
 3. Provide a name for the Team Project and Select **PartsUnlimited** template from the list.
 
-   ![](.\images\2.png)
+   <img src="images/2.png" >
