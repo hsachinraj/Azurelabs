@@ -16,10 +16,14 @@ In this lab we are going to discuss about **Deploying Asp.Net application to Azu
 
 1. From your browser, go to [VSTSDemoGenerator](https://vstsdemogenerator.azurewebsites.net)
 
-2. Provide VSTS account name and PAT.
+2. Provide VSTS **account name** and **PAT.** Click on **Verify & Continue**
 
    <img src="images/1.png" >
 
-3. Provide a name for the Team Project and Select **PartsUnlimited** template from the list.
+3. Provide a name for the team project **AspDotNet** and select **PartsUnlimited** template from the list.
 
    <img src="images/2.png" >
+
+4. Click on **Create Project**. You should seeproject creation status below.
+
+   <img src="images/3.png">
