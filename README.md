@@ -1,7 +1,7 @@
 ## Deploy Asp.Net application to Azure App Service using VSTS
 
 
-In this lab we are going to discuss about **Deploying Asp.Net application to Azure App service using Visual Studio Team Services**.
+This lab will show you how you can deploy an ASP.Net application to Azure App Service using an CI/CD pipeline in Visual Studio Team Services.
 
 ## Pre-requisites
 <table>
@@ -14,7 +14,7 @@ In this lab we are going to discuss about **Deploying Asp.Net application to Azu
    - If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/) program and get $25 per month of Azure credits.
 </td></tr>
 <tr><td valign="top">
-<img src="images/vstsdemogen.png" width="267" height="46"/>
+<img src="images/vstsdemogen.png"/>
 </td><td>Use the [Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net/) to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the **PartsUnlimited** template to follow the hands-on-labs.
 </td></tr>
 </table>
