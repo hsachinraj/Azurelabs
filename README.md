@@ -1,4 +1,4 @@
-## Deploying Asp.Net application to Azure App service using Visual Studio Team Services
+## Deploying Asp.Net application to Azure App Service using VSTS
 
 
 In this lab we are going to discuss about **Deploying Asp.Net application to Azure App service using Visual Studio Team Services**.
