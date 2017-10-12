@@ -5,8 +5,8 @@ In this lab we are going to discuss about **Deploying Asp.Net application to Azu
 
 **Pre-requisites**
 
-- **Visual Studio Team Services Account** If you don't have, you can sign up from [here](https://www.visualstudio.com/))
-- **Microsoft Azure Account** You will need a valid and active azure account for the labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/)
+- **Visual Studio Team Services Account**: If you don't have, you can sign up from [here](https://www.visualstudio.com/))
+- **Microsoft Azure Account**: You will need a valid and active azure account for the labs. If you do not have one, you can sign up for a [free trial](https://azure.microsoft.com/en-us/free/)
 
    - If you are a Visual Studio Active Subscriber, you are entitled for a $50-$150 credit per month. You can refer to this [link](https://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits-details/) to find out more including how to activate and start using your monthly Azure credit.
 
