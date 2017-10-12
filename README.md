@@ -24,6 +24,10 @@ In this lab we are going to discuss about **Deploying Asp.Net application to Azu
 
    <img src="images/2.png" >
 
-4. Click on **Create Project**. You should seeproject creation status below.
+4. Click on **Create Project**. You should see project creation status below.
 
    <img src="images/3.png">
+
+5. Navigate to the project that was created and go to **Code** hub.
+
+   <img src="images/4.png">
