@@ -14,12 +14,14 @@ In this lab we are going to discuss about **Deploying Asp.Net application to Azu
    - If you are not a Visual Studio Subscriber, you can sign up for the FREE [Visual Studio Dev Essentials](https://www.visualstudio.com/dev-essentials/) program and get $25 per month of Azure credits.
 </td></tr>
 <tr><td valign="top">
-<img src="images/vstsdemogen.png" />
+<img src="images/vstsdemogen.png" width="267" height="46"/>
 </td><td>Use the [Visual Studio Team Services Demo Data generator](https://vstsdemogenerator.azurewebsites.net/) to provision a project with pre-defined data on to your Visual Studio Team Services account. Please use the **PartsUnlimited** template to follow the hands-on-labs.
 </td></tr>
 </table>
 
 ## Configuring the CI/CD pipeline
-5. Navigate to the project that was created and go to **Code** hub.
 
+1. Navigate to the project that was created and go to **Code** hub.
    <img src="images/4.png">
+
+1. 
