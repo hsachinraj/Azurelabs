@@ -1,6 +1,6 @@
 ## Deploy Asp.Net application to Azure App Service using VSTS
 
-This lab shows how you can deploy an **ASP.Net application to Azure App Service using an CI/CD pipeline in Visual Studio Team Services**.
+This lab shows how you can deploy an **Asp.Net application to Azure App Service using an CI/CD pipeline in Visual Studio Team Services**.
 
 ## Pre-requisites
 <table>
