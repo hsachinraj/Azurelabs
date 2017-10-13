@@ -1,4 +1,4 @@
-## Deploy ASP.Net application to Azure App Service using VSTS
+## Deploy ASP.Net application to Azure App Service using Team Services
 
 This lab shows how you can deploy an **ASP.Net application to Azure App Service using an CI/CD pipeline in Visual Studio Team Services**.
 
@@ -6,7 +6,6 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
 1. Microsoft Azure Account:</b> You will need a valid and active azure account for the labs.
 
 1.  You need a <b>Visual Studio Team Services Account</b> and <a href="http://bit.ly/2gBL4r4">Personal Access Token</a>
-<
 
 
 ## Setting up the project
@@ -29,19 +28,19 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
 
 1. We have an ASP.NET app code provisioned by the demo generator system. We will deploy this to Azure app service
 
-1. We have a Continious Integration (CI) build setup ton run upon a code commit. Let's make a simple change to the code to trigger the CI build
+1. We have a Continious Integration (CI) build setup to run upon a code commit. Let's make a simple change to the code to trigger the CI build
 
 2. Open the file **Index.cshtml** by navigating to the path **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Home/Index.cshtml**
 
    <img src="images/5.png">
 
-3. Click on edit and change the code as **50%** to **70%** in the line number **28**.
+3. Edit the code. For this example, let's change line 28 to increase discount from **50%** to **70%** 
 
    <img src="images/6.png">
 
-4. **Commit** after doing the changes. 
+4. Select **Commit** to save and commit the changes. 
 
-5. Go to the **Build** tab to see the CI build running in progress.
+5. The code commit will trigger the CI build. Go to the **Build** tab to see the CI build running in progress.
 
    <img src="images/7.png">
 
@@ -51,9 +50,17 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
 
    <img src="images/9.png">
 
-## Continuous Deployment
+## Continuous Delivery
 
-We are using **Infrastructure as a Code** in our release pipeline which provides the required infrastructure on Azure Environment during the deployment phase. 
+we have a relase pipeline configured to deploy the application. It is associate to the build and triggered when the build is successful. Let's look at the release pipeline.
+
+1. Navigate to the **Releases** tab under **Build and Release** hub
+
+2. Select the **PartsUnlimitedE2E** definition and choose **Edit**
+
+3. We have two environments **QA** and **Production**
+
+We are using **Infrastructure as a Code** in the release pipeline with an ARM template to provision the required infrastructure (Web App and SQL database) on Azure 
 
 Once the release is successful, you can login to [Azure Portal](https://portal.azure.com) and search a **Resource Group** with the name **AspDotNet** that would have got created. It would be associated with few other resources like **SQL server, SQL DB, WebApps** etc as shown below.
 
