@@ -34,3 +34,17 @@ Use <a href="https://vstsdemogenerator.azurewebsites.net">VSTSDemoDataGenerator<
 3. Click on edit and change the <b>line number 28</b> to <b>70%</b>.
 
    <img src="images/6.png">
+
+4. <b>Commit</b> the changes after doing the changes. 
+
+5. Go to <b>Build</b> tab to see the CI build running in progress.
+
+   <img src="images/7.png">
+
+   <img src="images/8.png">
+
+6. Once the build is completed, you can see the summary which shows test results, code coverage etc as shown below.
+
+   <img src="images/9.png">
+
+7. 
