@@ -35,7 +35,7 @@ Use <a href="https://vstsdemogenerator.azurewebsites.net">VSTSDemoDataGenerator<
 
    <img src="images/6.png">
 
-4. <b>Commit</b> the changes after doing the changes. 
+4. <b>Commit</b> after doing the changes. 
 
 5. Go to <b>Build</b> tab to see the CI build running in progress.
 
