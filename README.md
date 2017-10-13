@@ -1,32 +1,35 @@
-## Deploy Asp.Net application to Azure App Service using VSTS
+## Deploy ASP.Net application to Azure App Service using VSTS
 
-This lab shows how you can deploy an **Asp.Net application to Azure App Service using an CI/CD pipeline in Visual Studio Team Services**.
+This lab shows how you can deploy an **ASP.Net application to Azure App Service using an CI/CD pipeline in Visual Studio Team Services**.
 
 ## Pre-requisites
-<table>
-   <tr>
-      <td valign="top">
-         <img src="images/azure.png" />
-      </td>
-      <td><b>Microsoft Azure Account:</b> You will need a valid and active azure account for the labs.</td>
-   </tr>
-   <tr>
-      <td valign="top">
-         <br>
-         <img src="images/vstsdemogen.png"/>
-      </td>
-      <td> You need a <b>VSTS account name</b> and <b>PAT</b>. Refer <a href="http://bit.ly/2gBL4r4">here</a> for more information on PAT. </td>
-   </tr>
-</table>
+1. Microsoft Azure Account:</b> You will need a valid and active azure account for the labs.
 
-Use <a href="https://vstsdemogenerator.azurewebsites.net">VSTSDemoDataGenerator</a> to provision **PartsUnlimited** project with pre-defined set of data.
+1.  You need a <b>Visual Studio Team Services Account</b> and <a href="http://bit.ly/2gBL4r4">Personal Access Token</a>
+<
 
-Since we need build artifacts to be deployed to Azure App Service, we need to generate one by changing the code and following through CI build process. Below are the steps to follow the same.
+
+## Setting up the project
+1. Use <a href="https://vstsdemogenerator.azurewebsites.net" target="_blank">VSTS Demo Data Generator</a> to provision a project on your VSTS account 
+
+ ![](images/1.png)
+
+ 2. Select **PartsUnlimited** for the template
+
+ ![](images/2.png)
+
+3. Once the project is provisioned, select the URL to navigate to the project that you provisioned
+
+
 ## Configuring the CI/CD pipeline
 
-1. Navigate to the project that was created and go to **Code** hub.
+1. Let's start from code . Navigate to the **Code** hub 
 
    <img src="images/4.png">
+
+1. We have an ASP.NET app code provisioned by the demo generator system. We will deploy this to Azure app service
+
+1. We have a Continious Integration (CI) build setup ton run upon a code commit. Let's make a simple change to the code to trigger the CI build
 
 2. Open the file **Index.cshtml** by navigating to the path **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Home/Index.cshtml**
 
