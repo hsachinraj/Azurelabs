@@ -58,3 +58,7 @@ We are using Infrastructure as a Code in our release pipeline which provides the
 Once the release is successful, you can login to azure and check a **Resource Group** with the name **AspDotNet** would have got created. It's associated with few other resources like **SQL server, SQL DB, WebApps** etc as shown below.
 
 <img src="images/10.png">
+
+Navigate to one of the WebApp from the resource group and you should see the application is deployed successfully with the changes made earlier as shown.
+
+<img src="images/11.png">
