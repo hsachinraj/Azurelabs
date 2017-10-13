@@ -29,7 +29,7 @@ Use <a href="https://vstsdemogenerator.azurewebsites.net">VSTSDemoDataGenerator<
 
 2. Open the file <b>Index.cshtml</b> by navigating to the path <b>PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Home/Index.cshtml</b>
 
-  <img src="images/5.png">
+   <img src="images/5.png">
 
 3. Click on edit and change the <b>line number 28</b> to <b>70%</b>.
 
