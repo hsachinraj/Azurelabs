@@ -1,7 +1,6 @@
 ## Deploy Asp.Net application to Azure App Service using VSTS
 
-
-This lab will show you how you can deploy an ASP.Net application to Azure App Service using an CI/CD pipeline in Visual Studio Team Services.
+This lab will show you how you can deploy an **ASP.Net application to Azure App Service using an CI/CD pipeline in Visual Studio Team Services**.
 
 ## Pre-requisites
 <table>
@@ -20,9 +19,9 @@ This lab will show you how you can deploy an ASP.Net application to Azure App Se
    </tr>
 </table>
 
-Use <a href="https://vstsdemogenerator.azurewebsites.net">VSTSDemoDataGenerator</a> to provision <b>PartsUnlimited</b> project.
+Use <a href="https://vstsdemogenerator.azurewebsites.net">VSTSDemoDataGenerator</a> to provision **PartsUnlimited** project with pre-defined set of data.
 
-Since we need build artifacts to be deployed to Azure App Service, we need to generate one by changing the code and following through CI build. Below are the steps to follow the same.
+Since we need build artifacts to be deployed to Azure App Service, we need to generate one by changing the code and following through CI build process. Below are the steps to follow the same.
 ## Configuring the CI/CD pipeline
 
 1. Navigate to the project that was created and go to **Code** hub.
@@ -33,7 +32,7 @@ Since we need build artifacts to be deployed to Azure App Service, we need to ge
 
    <img src="images/5.png">
 
-3. Click on edit and change the **line number 28** to **70%**.
+3. Click on edit and change the code as **50%** to **70%** in the line number **28**.
 
    <img src="images/6.png">
 
@@ -49,13 +48,11 @@ Since we need build artifacts to be deployed to Azure App Service, we need to ge
 
    <img src="images/9.png">
 
-7. Now let's go and see if the release has started to deploy on to Azure App Service.
-
 ## Continuous Deployment
 
-We are using Infrastructure as a Code in our release pipeline which provides the required infra on Azure Environment during the deployment phase. You can notice it by logging into [Azure Portal](https://portal.azure.com)
+We are using **Infrastructure as a Code** in our release pipeline which provides the required infrastructure on Azure Environment during the deployment phase. 
 
-Once the release is successful, you can login to azure and check a **Resource Group** with the name **AspDotNet** would have got created. It's associated with few other resources like **SQL server, SQL DB, WebApps** etc as shown below.
+Once the release is successful, you can login to [Azure Portal](https://portal.azure.com) and search a **Resource Group** with the name **AspDotNet** that would have got created. It would be associated with few other resources like **SQL server, SQL DB, WebApps** etc as shown below.
 
 <img src="images/10.png">
 
