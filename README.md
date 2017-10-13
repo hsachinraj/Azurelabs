@@ -50,3 +50,9 @@ Since we need build artifacts to be deployed to Azure App Service, we need to ge
    <img src="images/9.png">
 
 7. Now let's go and see if the release has started to deploy on to Azure App Service.
+
+## Continuous Deployment
+
+We are using Infrastructure as a Code in our release pipeline which provides the required infra on Azure Environment during the deployment phase. You can notice it by logging into [Azure Portal](https://portal.azure.com)
+
+Once the release is successful, you can login to azure and check a **Resource Group** with the name **AspDotNet** would have got created. It's associated with few other resources like **SQL server, SQL DB, WebApps** etc.
