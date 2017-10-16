@@ -52,7 +52,7 @@ This lab shows how you can integrate Team Servcies and Jenkins. You can store yo
 1. Now, you have Jenkins ready to use.
 
 
-## Installing Maven Plugin
+## Installing and configuring Maven
 
 Since Maven plugin is not automatically installed by default starting from Jenkins 2, we will need to do this manually
 
@@ -70,6 +70,23 @@ Since Maven plugin is not automatically installed by default starting from Jenki
 
     ![Global Tool Configuration](images/manage-tools-config.png)
 
-1. Jenkins provides several options when it comes to configuring Maven. If you already have Maven installed on your machine, you can simply provide the path in the MAVEN_HOME field. Alternatively, you can install a Maven distribution by extracting a zip file located in a shared directory, or execute a home-rolled installation script. Or you can let Jenkins do all the hard work and download Maven for you. To choose this option, just tick the Install automatically checkbox. Jenkins will download and install Maven from the Apache website the first time a build job needs it. Just choose the Maven version you want to install and Jenkins will do the rest. You will also need to give a name for your Maven version (imaginatively called “Maven 2.2.1” in the example), so that you can refer to it in your build jobs.
+1.  We will need to install and configure Maven first. Jenkins provides great out-of-the-box support for Maven.  We could  manually install Maven by extracting the ***tar*** file located in a shared folder. Alternatively, we can let Jenkins do all the hardwork and download Maven for you. Select the **Install automatically** checkbox. Jenkins will download and install Maven from the Apache website the first time a build job needs it. 
 
+    We will install version 3.5, the latest version at the time the lab is written
+    ![](images/maveninstallerconfig.png)
+
+1. Click **Apply** and select **Back to Dashboard** to return to the home page. 
+
+## Creating a new CI definition
+
+1. From Jenkins home page, select **New Item**. Enter a name for the build definition, and select **Maven project**. Click **OK** to save 
+    ![](images/newbuilddef.png)
+
+ 1. Scroll down to the **Source code Management** section. Select **Git** and Enter the clone URL of your VSTS Git repo. It should be in http://<your account name>.visualstudio.com/<your project name>/_git/MyShuttle
+
+    ![Configuring VSTS Git URL](images/jenkins-vstsrepo.png)
+
+    VSTS Git repos are private. So you will need to provide the credentials to access the repository. If you have not set the Git crednetials, you can do it from VSTS
+    ![Generating Git Credentials](images/vsts-generategitcreds.png)
+    
 1. 
