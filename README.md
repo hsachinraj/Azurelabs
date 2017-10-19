@@ -101,7 +101,7 @@ We have a relase pipeline configured to deploy the application. It is associated
    <table width="100%">
    <thead>
       <tr>
-         <th width="70%"><b>Tasks</b></th>
+         <th width="57%"><b>Tasks</b></th>
          <th><b>Arguments</b></th>
       </tr>
    </thead>
