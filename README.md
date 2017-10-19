@@ -111,7 +111,7 @@ We have a relase pipeline configured to deploy the application. It is associated
    </tr>
    <tr>
       <td><a href="http://bit.ly/2zkks4L"><b>Azure App Service Deploy</b></a> <img src="images/app-service-deploy.png"> </td>
-      <td>Uses MSBuild arguments to build the solution </td>
+      <td>Updates Azure App Service to deploy WebApps </td>
    </tr>
    <tr>
    </table>
