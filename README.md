@@ -118,9 +118,9 @@ We have a release pipeline configured to deploy the application. It is associate
    <tr>
    </table>
 
-We are using **Infrastructure as a Code** in the release pipeline with an ARM template to provision the required infrastructure (Web App and SQL database) on Azure.
+We are using **Infrastructure as a Code** in the release pipeline with an ARM template to provision the required infrastructure **(Web App and SQL database)** on Azure.
 
-5. You can see an on going release as shown below.
+5. You can see in progress release as shown below.
 
    <img src="images/13.png">
 
