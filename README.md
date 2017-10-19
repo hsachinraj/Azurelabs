@@ -49,7 +49,7 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
    <table width="100%">
    <thead>
       <tr>
-         <th width="65%"><b>Tasks</b></th>
+         <th width="50%"><b>Tasks</b></th>
          <th><b>Arguments</b></th>
       </tr>
    </thead>
@@ -61,7 +61,7 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
       <td><b>Visual Studio Build</b> <img src="images/visual-studio-build.png"> </td>
       <td>Uses MSBuild arguments to build the solution </td>
    </tr>
-    <tr>
+   <tr>
       <td><b>Visual Studio Test</b> <img src="images/vstest.png"> </td>
       <td>Run Unit Tests using Visual Studio Test Runner </td>
    </tr>
@@ -73,7 +73,7 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
       <td><b>Publish Build Artifacts</b> <img src="images/publish-build-artifacts.png"> </td>
       <td> Used to share the build artifacts </td>
    </tr>
-   </table>
+</table>
 
    <img src="images/8.png">
 
