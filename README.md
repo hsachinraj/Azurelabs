@@ -52,7 +52,7 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
    <thead>
       <tr>
          <th width="50%"><b>Tasks</b></th>
-         <th><b>Arguments</b></th>
+         <th><b>Usage</b></th>
       </tr>
    </thead>
    <tr>
@@ -102,7 +102,7 @@ We have a relase pipeline configured to deploy the application. It is associated
    <thead>
       <tr>
          <th width="57%"><b>Tasks</b></th>
-         <th><b>Arguments</b></th>
+         <th><b>Usage</b></th>
       </tr>
    </thead>
    <tr>
