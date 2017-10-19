@@ -54,23 +54,23 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
       </tr>
    </thead>
    <tr>
-      <td><b>Nuget Installer</b> <img src="images/nuget.png"></td>
-      <td>Restore NuGet Packages for the solution </td>
+      <td><a href="http://bit.ly/2ilmcHL"><b>Nuget Installer</b></a> <img src="images/nuget.png"></td>
+      <td>Restore NuGet Packages/Dependencies for the solution </td>
    </tr>
    <tr>
-      <td><b>Visual Studio Build</b> <img src="images/visual-studio-build.png"> </td>
+      <td><a href="http://bit.ly/2xPrMUY"><b>Visual Studio Build</b></a> <img src="images/visual-studio-build.png"> </td>
       <td>Uses MSBuild arguments to build the solution </td>
    </tr>
    <tr>
-      <td><b>Visual Studio Test</b> <img src="images/vstest.png"> </td>
+      <td><a href="http://bit.ly/2xPqJ7f"><b>Visual Studio Test</b></a> <img src="images/vstest.png"> </td>
       <td>Run Unit Tests using Visual Studio Test Runner </td>
    </tr>
    <tr>
-      <td><b>Copy Files</b> <img src="images/copy-files.png"> </td>
+      <td><a href="http://bit.ly/2grMxTQ"><b>Copy Files</b></a> <img src="images/copy-files.png"> </td>
       <td>Used to Copy files from source to destination folder using match patterns </td>
    </tr>
    <tr>
-      <td><b>Publish Build Artifacts</b> <img src="images/publish-build-artifacts.png"> </td>
+      <td><a href="http://bit.ly/2yBgXde"><b>Publish Build Artifacts</b></a> <img src="images/publish-build-artifacts.png"> </td>
       <td> Used to share the build artifacts </td>
    </tr>
 </table>
