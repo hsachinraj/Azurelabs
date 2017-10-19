@@ -46,6 +46,8 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
 
    <img src="images/7.png">
 
+   While the build is in progress, let's explore the build definition. Below is the table which gives you the glimpse of the tasks that is being used in the build definition.
+
    <table width="100%">
    <thead>
       <tr>
