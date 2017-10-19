@@ -32,7 +32,9 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
 
 3. We have a Continious Integration (CI) build setup to run upon a code commit. Let's make a simple change to the code to trigger the CI build.
 
-4. Open the file **Index.cshtml** by navigating to the path **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Home/Index.cshtml**
+4. Open the file **Index.cshtml** by navigating to the below path-
+   
+   > **PartsUnlimited-aspnet45/src/PartsUnlimitedWebsite/Views/Home/Index.cshtml**
 
    <img src="images/5.png">
 
