@@ -75,8 +75,9 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
       <td><a href="http://bit.ly/2yBgXde"><b>Publish Build Artifacts</b></a> <img src="images/publish-build-artifacts.png"> </td>
       <td> Used to share the build artifacts </td>
    </tr>
-</table>
-
+   </table>
+   <br/>
+   
    <img src="images/8.png">
 
 8. Once the build is completed, you can see the summary which shows **test results, code coverage** etc as shown below.
