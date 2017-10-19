@@ -57,7 +57,7 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
    </thead>
    <tr>
       <td><a href="http://bit.ly/2ilmcHL"><b>Nuget Installer</b></a> <img src="images/nuget.png"></td>
-      <td>Restore NuGet Packages/Dependencies for the solution </td>
+      <td>Restores NuGet Packages/Dependencies for the solution </td>
    </tr>
    <tr>
       <td><a href="http://bit.ly/2xPrMUY"><b>Visual Studio Build</b></a> <img src="images/visual-studio-build.png"> </td>
@@ -65,7 +65,7 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
    </tr>
    <tr>
       <td><a href="http://bit.ly/2xPqJ7f"><b>Visual Studio Test</b></a> <img src="images/vstest.png"> </td>
-      <td>Run Unit Tests using Visual Studio Test Runner </td>
+      <td>Runs Unit Tests by using Visual Studio Test Runner </td>
    </tr>
    <tr>
       <td><a href="http://bit.ly/2grMxTQ"><b>Copy Files</b></a> <img src="images/copy-files.png"> </td>
@@ -77,7 +77,7 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
    </tr>
    </table>
    <br/>
-   
+
    <img src="images/8.png">
 
 8. Once the build is completed, you can see the summary which shows **test results, code coverage** etc as shown below.
@@ -86,15 +86,37 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
 
 ## Continuous Delivery
 
-we have a relase pipeline configured to deploy the application. It is associate to the build and triggered when the build is successful. Let's look at the release pipeline.
+We have a relase pipeline configured to deploy the application. It is associated to the build and triggered when the build is successful. Let's look at the release pipeline.
 
-1. Navigate to the **Releases** tab under **Build and Release** hub
+1. Navigate to the **Releases** tab under **Build and Release** hub.
 
-2. Select the **PartsUnlimitedE2E** definition and choose **Edit**
+2. Select the **PartsUnlimitedE2E** definition and choose **Edit**.
 
-3. We have two environments **QA** and **Production**
+3. We have three environments **Dev**, **QA** and **Production**.
 
-We are using **Infrastructure as a Code** in the release pipeline with an ARM template to provision the required infrastructure (Web App and SQL database) on Azure 
+   <img src="images/12.png">
+
+4. Go to the **Dev** environment, you can see we have 2 tasks being used. Below is the table which gives you the glimpse of the tasks that is being used in the current release definition.
+
+   <table width="100%">
+   <thead>
+      <tr>
+         <th width="70%"><b>Tasks</b></th>
+         <th><b>Arguments</b></th>
+      </tr>
+   </thead>
+   <tr>
+      <td><a href="http://bit.ly/2ysg1It"><b>Azure Resource Group Deployment</b></a> <img src="images/arm.png"></td>
+      <td>Creates, Updates an existing resource group using ARM templates  </td>
+   </tr>
+   <tr>
+      <td><a href="http://bit.ly/2zkks4L"><b>Azure App Service Deploy</b></a> <img src="images/app-service-deploy.png"> </td>
+      <td>Uses MSBuild arguments to build the solution </td>
+   </tr>
+   <tr>
+   </table>
+
+We are using **Infrastructure as a Code** in the release pipeline with an ARM template to provision the required infrastructure (Web App and SQL database) on Azure. 
 
 Once the release is successful, you can login to [Azure Portal](https://portal.azure.com) and search a **Resource Group** with the name **AspDotNet** that would have got created. It would be associated with few other resources like **SQL server, SQL DB, WebApps** etc as shown below.
 
