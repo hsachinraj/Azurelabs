@@ -92,4 +92,42 @@ This lab shows how you can deploy an **.NET Core application to Azure App Servic
 
    <img src="images/8.png">
 
+##Continuous Delivery
+
+We have a release pipeline configured to deploy the application. It is associated to the build and triggered when the build is successful. Let's look at the release pipeline.
+
+1. Navigate to the **Releases** tab under **Build and Release** hub.
+
+2. Select the **MyHealthClinicE2E** definition and choose **Edit**.
+
+3. We have three environments **Dev**, **QA** and **Production**.
+
+   <img src="images/9.png">
+
+4. Go to the **Dev** environment, you can see we have 2 tasks being used. Below is the table which gives you the glimpse of the tasks that is being used in the current release definition.
+
+   <table width="100%">
+   <thead>
+      <tr>
+         <th width="57%"><b>Tasks</b></th>
+         <th><b>Usage</b></th>
+      </tr>
+   </thead>
+   <tr>
+      <td><a href="http://bit.ly/2ysg1It"><b>Azure Resource Group Deployment</b></a> <img src="images/arm.png"></td>
+      <td>Creates, Updates an existing resource group using ARM templates  </td>
+   </tr>
+   <tr>
+      <td><a href="http://bit.ly/2zkks4L"><b>Azure App Service Deploy</b></a> <img src="images/app-service-deploy.png"> </td>
+      <td>Updates Azure App Service to deploy WebApps </td>
+   </tr>
+   <tr>
+   </table>
+
+We are using **Infrastructure as a Code** in the release pipeline with an ARM template to provision the required infrastructure **(Web App and SQL database)** on Azure.
+
+5. You can see in progress release as shown below.
+
+   <img src="images/10.png">
+
 
