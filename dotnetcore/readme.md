@@ -88,4 +88,8 @@ This lab shows how you can deploy an **.NET Core application to Azure App Servic
 
    <img src="images/7.png">
 
+8. Once the build is completed, you can see the summary which shows **test results** etc as shown below.
+
+   <img src="images/8.png">
+
 
