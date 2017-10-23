@@ -92,7 +92,7 @@ This lab shows how you can deploy an **.NET Core application to Azure App Servic
 
    <img src="images/8.png">
 
-##Continuous Delivery
+## Continuous Delivery
 
 We have a release pipeline configured to deploy the application. It is associated to the build and triggered when the build is successful. Let's look at the release pipeline.
 
