@@ -130,4 +130,18 @@ We are using **Infrastructure as a Code** in the release pipeline with an ARM te
 
    <img src="images/10.png">
 
+6. Once the release is completed, you can see the summary which shows **Release Summary, logs etc**.
+
+   <img src="images/11.png">
+
+   <img src="images/12.png">
+
+7. Login to [Azure Portal](https://portal.azure.com) and search a **Resource Group** with the name **dotnetcore** that would have got created. It would be associated with few other resources like **SQL server, SQL DB, WebApps** etc as shown below.
+
+   <img src="images/13.png">
+
+8. Navigate to one of the WebApp from the resource group and you should see the application is deployed successfully with the changes made earlier as shown.
+
+   <img src="images/14.png">
+
 
