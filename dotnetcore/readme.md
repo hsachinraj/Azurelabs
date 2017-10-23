@@ -56,8 +56,8 @@ This lab shows how you can deploy an **.NET Core application to Azure App Servic
       </tr>
    </thead>
    <tr>
-      <td><a href="http://bit.ly/2xXy75z"><b>dotnet restore</b></a> <img src="images/dotnetcore.png"></td>
-      <td>Restores NuGet Packages/Dependencies for the solution using dotnet command-line tool </td>
+      <td><a href="http://bit.ly/2xXy75z"><b>dotnet core</b></a> <img src="images/dotnetcore.png"></td>
+      <td>restores, build, test, publish and run NuGet Packages/Dependencies for the solution using dotnet command-line tool </td>
    </tr>
    <tr>
       <td><a href="http://bit.ly/2xZO6zZ"><b>npm Install</b></a> <img src="images/npm.png"> </td>
@@ -84,5 +84,8 @@ This lab shows how you can deploy an **.NET Core application to Azure App Servic
       <td> Used to share the build artifacts </td>
    </tr>
    </table>
- 
+   <br/>
+
+   <img src="images/7.png">
+
 
