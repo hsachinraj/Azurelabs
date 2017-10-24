@@ -1,1 +1,1 @@
-# This repo contains labs for OSS integrating with Team Services and Azure
+# This repo contains labs on DevOps with Team Services and Azure
