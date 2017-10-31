@@ -39,26 +39,32 @@ In this lab, you will be introduced to Technical debt, how to configure your Tea
    <tr>
       <td>sqVM_AppName</td>
       <td>Name of the VM that SonarQube will be installed upon</td>
+      <td>None</td>
    </tr>
    <tr>
       <td>sq_PublicIP_DnsPrefix</td>
       <td>The prefix of the public URL for the VM on the Internet (Max 63 chars, lower-case). It should match with the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$ or it will raise an error. This will be used to build the fully qualified URL for the SonarQube site in the form of http://[sq_PublicIP_DnsPrefix].[AzureRegion].cloudapp.azure.com Ex: A value of "my-sonarqube" will result in a URL of http://my-sonarqube.eastus.cloudapp.azure.com if the ARM template is deployed into a storage account hosted in the EASTUS Azure region</td>
+      <td>None</td>
    </tr>
    <tr>
       <td>sqVM_AppAdmin_UserName</td>
       <td>Local Admin account name for the SonarQube VM</td>
+      <td>None</td>
    </tr>
    <tr>
       <td>sqVM_AppAdmin_Password</td>
       <td>Password for the SonarQube VM Local Admin account</td>
+      <td>None</td>
    </tr>
    <tr>
       <td>sqDB_Admin_UserName</td>
       <td>Admin account name for Azure SQL Server</td>
+      <td>None</td>
    </tr>
    <tr>
       <td>sqDB_Admin_Password</td>
       <td>Password for Azure SQL Server Admin account</td>
+      <td>None</td>
    </tr>
    <tr>
       <td>sqDB_DBName</td>
