@@ -30,7 +30,7 @@ This lab shows how you can integrate Team Servcies and Jenkins. You can store yo
     ![SSH Connection Info](images/vmconnect_ssh1.png)
 
 1. Open a commannd prompt and type the following command
-    > putty.exe -ssh -L 8080:localhost:8080 <username>@<ip address>
+    > putty.exe -ssh -L 8080:localhost:8080 \<username>@\<ip address>
 
     ![Connecting from Putty](images/ssh2.png)
 
@@ -43,14 +43,19 @@ This lab shows how you can integrate Team Servcies and Jenkins. You can store yo
 1. Since this is the first time you are connecting to Jenkins, you will need to enter the initial password. Return to the putty terminal password and type the following command 
     >sudo nano /var/lib/jenkins/secrets/initialAdminPassword
 
-1. Press **Ctrl+K** to copy the text and place it in the clipboard. Press **F2** to exit the nano editor
+1. Press **Ctrl+K** to cut the text and place it in the clipboard. Press **F2** to exit the nano editor 
 
 1. Back in the browser, paste the text and select **Continue**
+    ![Unlock Jenkins - First Time](images/Jenkinsinitialpwd.png)
 
-1. You can create a first admin user for Jenkins. Enter a user name and password and select **Continue**
+1. Choose **Install suggested plugin** to install the default plugin. We will need to add Maven plugin but we will see that later in the lab.
+    ![Customize Jenkins Plugins](images/customizejenkins-plugins.png)
+    
+1. You will need to create a new *Admin* user for Jenkins. Provide a user name and password and select **Continue**
+    ![Create Admin User for Jenkins](images/firstadminuser.png)
 
-1. Now, you have Jenkins ready to use.
-
+1. Now, you have Jenkins ready to use. Select **Start using Jenkins**
+    ![Jenkins Ready](images/jenkinsready.png)
 
 ## Installing and configuring Maven
 
@@ -64,13 +69,14 @@ Since Maven plugin is not automatically installed by default starting from Jenki
 
 1.  Select **Available** tab and search **maven-plugin** in the filter box
 
-1. Check **Maven Integration Plugin** and selct **Install without restart** to install the plugin
+1. Check **Maven Integration Plugin** and selct **Install without restart** to install the plugin. Wait for the plug-in to be installed.
+    ![Install Maven](images/installmavenplugin.png)
 
 1. Select **Manage Jenkins** and select **Global Tool Configuration**
 
     ![Global Tool Configuration](images/manage-tools-config.png)
 
-1.  We will need to install and configure Maven first. Jenkins provides great out-of-the-box support for Maven.  We could  manually install Maven by extracting the ***tar*** file located in a shared folder. Alternatively, we can let Jenkins do all the hardwork and download Maven for you. Select the **Install automatically** checkbox. Jenkins will download and install Maven from the Apache website the first time a build job needs it. 
+1.  We have added the Maven plugin for Jenkins but we have not installed Maven on the machine. Jenkins provides great out-of-the-box support for Maven.  We could  manually install Maven by extracting the ***tar*** file located in a shared folder. Alternatively, we can let Jenkins do all the hardwork and download Maven for you. Select the **Install automatically** checkbox. Jenkins will download and install Maven from the Apache website the first time a build job needs it. 
 
     We will install version 3.5, the latest version at the time the lab is written
     ![](images/maveninstallerconfig.png)
@@ -107,8 +113,13 @@ Since Maven plugin is not automatically installed by default starting from Jenki
 1. Select **Build Now** to start an Ad-hoc build
 
 1. You will notice the build progress just below the left side navigation menu
+    ![Running Ad-hoc Build](images/adhocbuild.png)
 
-1. You can select the build number to get into the details of the build including the build modules, in this case, the WAR file for the project.
+1. You can select the build number to get into the details of the build including the build artifacts, in this case, the WAR file for the project.
+    ![Build Details](images/builddetails.png)
+    ![Build Artifacts](images/buildmodules.png)
+
+1. Select the **Test Results** links if you want to see the results of the unit tests that we included in the build defintion. 
 
 ## Configuring the build as Continuous Integration
 
@@ -141,7 +152,23 @@ In this section, let's see how you can configure a code change in VSTS to trigge
     
     ![VSTS - Jenkins Info](images/vsts-jenkinssubscription2.png)
 
-Now you can try making a change and commit your code. Once the change is committed, it should automatically trigger a build in Jenkins
+Now you can try making a change and commit your code. Upon commit, VSTS will notify Jenkins to initiate a new build/
+
+
+## Deploying Jenkins Artifacts with Release Management
+
+You can Visual Studio Team Services Release Management to fetch the artifacts from the Jenkins server and deploy them. In this exercise below, we will configure VSTS to deploy the WAR file to Azure Web App Service. 
+
+1. First, we will need to create an endpoint to Azure and the Jenkis server. From the **Admin | Services** tab, select the **New Service Endpoint | Jenkins** button to create a new endpoint
+
+2. Provide the server URL and the user name and password (the credentials you provided for the first admin user). The server URL is in http://[server IP address or DNS name] format. Click **Verify Copnnection** to validate the entries and to confirm that VSTS is able to reach the Jenkins server
+    ![Jenkins Endpoint](images/jenkinsendpoint.png)
+
+1. Create a new Azure endpoint
+
+1. Once you the have the endpoints configured, you can create a new release defintion. Select the **Build & Release** hub and select **+ Create a new Release defintion**
+
+2. 
 
 
 
