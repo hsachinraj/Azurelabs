@@ -48,7 +48,7 @@ This lab shows how you can deploy an **ASP.Net application to Azure App Service 
 
    <img src="images/7.png">
 
-   While the build is in progress, let's explore the build definition. Below is the table which gives you the glimpse of the tasks that is being used in the current build definition.
+   While the build is in progress, let's explore the build definition. The tasks that is used in the build definition are listed in the table below.
 
    <table width="100%">
    <thead>
@@ -98,7 +98,7 @@ We have a release pipeline configured to deploy the application. It is associate
 
    <img src="images/12.png">
 
-4. Go to the **Dev** environment, you can see we have 2 tasks being used. Below is the table which gives you the glimpse of the tasks that is being used in the current release definition.
+4. Go to the **Dev** environment, you can see we have 2 tasks being used. The tasks that is used in the release definition are listed in the table below.
 
    <table width="100%">
    <thead>
