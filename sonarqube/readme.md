@@ -24,7 +24,7 @@ In this lab, you will be introduced to Technical debt, how to configure your Tea
 
 1. Click on **Deploy To Azure** to spin up a SonarQube Server on Azure VM.
 
-   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FVKarthik91%2FSonarQube%2Fmaster%2Fazuredeploy.json"><img src="http://azuredeploy.net/deploybutton.png"></a>
+   <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhsachinraj%2FAzurelabs%2Fmaster%2Fsonarqube%2Ftemplates%2Fazuredeploy.json"><img src="http://azuredeploy.net/deploybutton.png"></a>
 
    Provide the following valid parameters as shown in the table.
 
