@@ -20,7 +20,7 @@ In this lab, you will be introduced to Technical debt, how to configure your Tea
 
 3. Once the project is provisioned, select the URL to navigate to the project that you provisioned.
 
-## Setting up SonarQube Server on Azure
+## Setting up the Environment
 
 1. Click on **Deploy To Azure** to spin up a SonarQube Server on Azure VM.
 
