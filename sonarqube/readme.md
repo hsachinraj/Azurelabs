@@ -1,6 +1,6 @@
 ## Managing Technical Debt with Visual Studio Team Services and SonarQube 
 
-In this lab, you will be introduced to Technical debt, how to configure your Team Build Definitions to use SonarQube, how to understand the analysis results and finally how to configure quality profile to control the rule set used by SonarQube for analyzing your project.
+In this lab, you will be introduced to Technical debt, how to configure your Team Build Definitions to use SonarQube, how to understand the analysis results.
 
 ## Pre-requisites
 
