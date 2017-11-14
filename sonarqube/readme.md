@@ -140,6 +140,12 @@ In this lab, you will be introduced to Technical debt, how to configure your Tea
 
    <img src="images/analysis_2.png">
 
+## Summary
+
+With **Visual Studio Team Services** and **SonarQube** you can easily schedule the execution of analysis and provide a shared vision of code quality for developers, tech leads, managers and executives, also to act as a toll gate for application promotion or release.
+
+## Feedback
+
 
 
    
