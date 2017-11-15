@@ -81,6 +81,7 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
 1.  Select **Available** tab and search **maven-plugin** in the filter box
 
 1. Check **Maven Integration Plugin** and selct **Install without restart** to install the plugin. Wait for the plug-in to be installed.
+
     ![Install Maven](images/installmavenplugin.png)
 
 1. Select **Manage Jenkins** and select **Global Tool Configuration**
@@ -90,11 +91,12 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
 1.  We have added the Maven plugin for Jenkins but we have not installed Maven on the machine. Jenkins provides great out-of-the-box support for Maven.  We could  manually install Maven by extracting the ***tar*** file located in a shared folder. Alternatively, we can let Jenkins do all the hardwork and download Maven for you. Select the **Install automatically** checkbox. Jenkins will download and install Maven from the Apache website the first time a build job needs it. 
 
     We will install version 3.5, the latest version at the time the lab is written
-    ![](images/maveninstallerconfig.png)
+
+    ![Maven Installer](images/maveninstallerconfig.png)
 
 1. Click **Apply** and select **Back to Dashboard** to return to the home page. 
 
-## Creating a new CI definition
+## Creating a new Build Job
 
 1. From Jenkins home page, select **New Item**. Enter a name for the build definition, and select **Maven project**. Click **OK** to save 
     ![](images/newbuilddef.png)
