@@ -1,13 +1,24 @@
 ## Working with Jenkins
 
-This lab shows how you can integrate Team Servcies and Jenkins. You can store your code in VSTS and continue to use Jenkins for your continuous integration builds. We will see how you trigger a Jenkins build when you push code to your team project's Git repository or when you check code in to Team Foundation version control
+[Jenkins](https://jenkins.io/) is a very popular Java based, open source continuous integration server that allows teams to continuously build applications across platforms.
 
+Visual Studio Team Services(VSTS) includes Team Build,a native CI build server that runs on Windows, Linux and Mac and allows building any application on these platform. Development teams that prefer Jenkins can continue to use it for continuous integratuion builds with VSTS for source control and release management
+
+This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we will see how you can
+ * Provision Jenkins on Azure with a Azure Marketplace Template VM
+ * Setup a Jenkins build
+ * Configure Team Services to trigger Jenkins upon code change
+ * Setup Release Management in VSTS to deploy artifacts from Jenkins
+
+---
 ## Pre-requisites
 1. Microsoft Azure Account:</b> You will need a valid and active azure account for the labs.
 
 1.  You need a <b>Visual Studio Team Services Account</b> and <a href="http://bit.ly/2gBL4r4">Personal Access Token</a>
 
-1. You will need Putty
+1. You will need [Putty](http://www.putty.org/), a free SSH and Telnet client
+
+---
 
 ## Setting up the project
 
