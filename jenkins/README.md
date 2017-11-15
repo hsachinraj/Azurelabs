@@ -31,7 +31,7 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
     <img src="http://azuredeploy.net/deploybutton.png"/>
     </a>
  
-1. Once the machine is provisioned, click **Connect** and note down the \<username> and \<ip address>. We will need this to coonect to the VM from Putty
+1. Once the machine is provisioned, click **Connect** and note down the \<username> and \<ip address>. We will need this to connect to the VM from ***Putty***
     ![SSH Connection Info](images/vmconnect_ssh1.png)
 
 1. Open a command prompt and type the following command
@@ -54,20 +54,23 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
 1. Back in the browser, paste the text and select **Continue**
     ![Unlock Jenkins - First Time](images/Jenkinsinitialpwd.png)
 
-    Jenkins has a large ecosystem with a strong and active open source community users contributing several hundreds of useful plugins. When you setup Jenkins, you can start with installing the most commonly used plugins or select and install the ones that you want.
+    Next we will choose the plug-ins to install. Jenkins has a large ecosystem with a strong and active open source community users contributing several hundreds of useful plugins. When you setup Jenkins, you can start with installing the most commonly used plugins or select and install the ones that you want.
 
 1. We will need the Maven plug-in which is not installed by default but we will do it later. For now, we will go with the suggested plugins. Select **Install suggested plugin**
+
     ![Customize Jenkins Plugins](images/customizejenkins-plugins.png)
     
 1. You will need to create a new *Admin* user for Jenkins. Provide a user name and password and select **Continue**
+
     ![Create Admin User for Jenkins](images/firstadminuser.png)
 
 1. Now, you have Jenkins ready to use. Select **Start using Jenkins**
+
     ![Jenkins Ready](images/jenkinsready.png)
 
 ## Installing and configuring Maven
 
-Since Maven plugin is not automatically installed by default starting from Jenkins 2, we will need to do this manually
+ Maven plugin is not automatically installed by default starting from Jenkins version 2. We will need to do this manually
 
 1. Select **Manage Jenkins** on the main page of the Jenkins portal.  This will take you to the Manage Jenkins page, the central one-stop-shop for all your Jenkins configuration. From this screen, you can configure your Jenkins server, install and upgrade plugins, keep track of system load, manage distributed build servers, and more! 
 
