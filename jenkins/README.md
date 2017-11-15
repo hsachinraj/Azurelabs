@@ -27,10 +27,10 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
 ## Setting up Jenkins VM
 1. Let's set up Jenkins. We will use the VM image available on Azure MarketPlace that will install the latest stable Jenkins version on a Ubuntu Linux VM along with tools and plugins configured to work with Azure
 
-    <a href="https://github.com/hsachinraj/Azurelabs/blob/jenkinslab/jenkins/template/jenkinsVM.json">
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhsachinraj%2FAzurelabs%2Fjenkins%2Fjenkins%2Ftemplate%2FjenkinsVM.json">
     <img src="http://azuredeploy.net/deploybutton.png"/>
     </a>
-    <a href="https://github.com/hsachinraj/Azurelabs/blob/jenkinslab/jenkins/template/jenkinsVM.json">
+    <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhsachinraj%2FAzurelabs%2Fjenkins%2Fjenkins%2template/jenkinsVM.json">
     <img src="http://armviz.io/visualizebutton.png"/>
     </a>
  
