@@ -2,7 +2,7 @@
 
 [Jenkins](https://jenkins.io/) is a very popular Java based, open source continuous integration server that allows teams to continuously build applications across platforms.
 
-Visual Studio Team Services(VSTS) includes Team Build,a native CI build server that runs on Windows, Linux and Mac and allows building any application on these platform. Development teams that prefer Jenkins can continue to use it for continuous integratuion builds with VSTS for source control and release management
+Visual Studio Team Services(VSTS) includes Team Build,a native CI build server that runs on Windows, Linux and Mac and allows building any application on these platform. Yet, development teams that use Jenkins, can use VSTS for source control and release management and continue to use Jenkins for continuous integration. 
 
 This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we will see how you can
  * Provision Jenkins on Azure with a Azure Marketplace Template VM
@@ -10,15 +10,12 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
  * Configure Team Services to trigger Jenkins upon code change
  * Setup Release Management in VSTS to deploy artifacts from Jenkins
 
----
 ## Pre-requisites
 1. Microsoft Azure Account:</b> You will need a valid and active azure account for the labs.
 
 1.  You need a <b>Visual Studio Team Services Account</b> and <a href="http://bit.ly/2gBL4r4">Personal Access Token</a>
 
 1. You will need [Putty](http://www.putty.org/), a free SSH and Telnet client
-
----
 
 ## Setting up the project
 
@@ -28,7 +25,7 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
 
 
 ## Setting up Jenkins VM
-1. Lets set up a Jenkins VM on Azure. We will use the VM image available on Azure MarketPlace
+1. Let's set up Jenkins. We will use the VM image available on Azure MarketPlace that will install the latest stable Jenkins version on a Ubuntu Linux VM along with tools and plugins configured to work with Azure
 
     <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fhsachinraj%2FAzurelabs%2Fmaster%2Fjenkins%2Ftemplate%2FjenkinsVM.json">
     <img src="http://azuredeploy.net/deploybutton.png"/>

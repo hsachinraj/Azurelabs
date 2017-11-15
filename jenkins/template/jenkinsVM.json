@@ -40,7 +40,8 @@
             "metadata": {
                 "description": "Authentication type (can be 'password' or 'sshPublicKey')"
             },
-            "type": "string"
+            "type": "string",
+            "defaultValue": "password"
         },
         "dnsPrefix": {
             "metadata": {
@@ -52,7 +53,8 @@
             "metadata": {
                 "description": "Public IP name"
             },
-            "type": "string"
+            "type": "string",
+            "defaultValue": "myPublicIP"
         },
         "publicIPNewOrExisting": {
             "metadata": {
@@ -83,7 +85,8 @@
             "metadata": {
                 "description": "Virtual Machine Size"
             },
-            "type": "string"
+            "type": "string",
+            "defaultValue": "DS2_V2"
         },
         "location": {
             "metadata": {

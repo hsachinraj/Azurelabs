@@ -8,23 +8,8 @@
         "adminUserName": {
             "value": "vmadmin"
         },
-        "authenticationType": {
-            "value": "password"
-        },
         "dnsPrefix": {
-            "value": "sachin-jenkins"
-        },
-        "publicIPName": {
-            "value": "JenkinsIP"
-        },
-        "publicIPNewOrExisting": {
-            "value": "new"
-        },
-        "publicIPResourceGroup": {
-            "value": "Jenkins"
-        },
-        "storageAccountType": {
-            "value": "Premium_LRS"
+            "value": "myjenkins"
         },
         "vmName": {
             "value": "Jenkins"
@@ -34,9 +19,6 @@
         },
         "location": {
             "value": "westus"
-        },
-        "jenkinsReleaseType": {
-            "value": "LTS"
         }
     }
 }
