@@ -70,8 +70,6 @@
         "publicIPDeploymentName": "[concat(parameters('vmName'), '-publicIP-deploy')]",
         "subnetName": "[concat(parameters('vmName'), 'Subnet')]",
         "subnetPrefix": "10.0.0.0/24",
-        "templateUrlIP": "[concat(variables('nestedUrl'),'/publicIP-',variables('publicIPNewOrExisting'),'.json'))]",
-        "templateUrlVM": "[concat(variables('nestedUrl'),'/VM-new-',variables('authenticationType'),'.json'))]",
         "ubuntuSku": "16.04-LTS",
         "virtualNetworkName": "[concat(parameters('vmName'), 'VNET')]",
         "virtualNetworkPrefix": "10.0.0.0/16",
