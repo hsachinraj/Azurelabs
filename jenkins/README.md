@@ -27,33 +27,36 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
 ## Setting up Jenkins VM
 1. Let's set up Jenkins. We will use the VM image available on Azure MarketPlace that will install the latest stable Jenkins version on a Ubuntu Linux VM along with tools and plugins configured to work with Azure
 
-    <a href="https://portal.azure.com/#create/azure-oss.jenkinsjenkins">
+    <a href="https://portal.azure.com/#create/azure-oss.jenkinsjenkins" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
     </a>
  
-1. Once the machine is provisioned, selct **Connect** and note down the connection string. This should be in a <username>@<ip address> format. We will need this to conenct from Putty
+1. Once the machine is provisioned, click **Connect** and note down the \<username> and \<ip address>. We will need this to coonect to the VM from Putty
     ![SSH Connection Info](images/vmconnect_ssh1.png)
 
-1. Open a commannd prompt and type the following command
+1. Open a command prompt and type the following command
     > putty.exe -ssh -L 8080:localhost:8080 \<username>@\<ip address>
 
     ![Connecting from Putty](images/ssh2.png)
 
 1. Login with the user name and password that you provided when you provisioned the VM.
 
-1. Once you are connected successfully, 
+1. Once you are connected successfully, open a browser and type [http://localhost:8080](http://localhost:8080)
 
-1. Open a browser and type [http://localhost:8080](http://localhost:8080)
+1. You will need to provide the initial admin password that Jenkins generates and saves it in a file on the server. 
+    ![Jenkins Initial Password](images/jenkinsinitialpwd.png)
 
-1. Since this is the first time you are connecting to Jenkins, you will need to enter the initial password. Return to the putty terminal password and type the following command 
+1. Return to the **Putty** terminal password and type the following command to open the file that has the initial admin password. Copy the text
     >sudo nano /var/lib/jenkins/secrets/initialAdminPassword
 
-1. Press **Ctrl+K** to cut the text and place it in the clipboard. Press **F2** to exit the nano editor 
+    *You can press **Ctrl+K** to cut the text and place it in the clipboard. Press **F2** to exit the nano editor*
 
 1. Back in the browser, paste the text and select **Continue**
     ![Unlock Jenkins - First Time](images/Jenkinsinitialpwd.png)
 
-1. Choose **Install suggested plugin** to install the default plugin. We will need to add Maven plugin but we will see that later in the lab.
+    Jenkins has a large ecosystem with a strong and active open source community users contributing several hundreds of useful plugins. When you setup Jenkins, you can start with installing the most commonly used plugins or select and install the ones that you want.
+
+1. We will need the Maven plug-in which is not installed by default but we will do it later. For now, we will go with the suggested plugins. Select **Install suggested plugin**
     ![Customize Jenkins Plugins](images/customizejenkins-plugins.png)
     
 1. You will need to create a new *Admin* user for Jenkins. Provide a user name and password and select **Continue**
