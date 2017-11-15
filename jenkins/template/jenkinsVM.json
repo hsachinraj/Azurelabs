@@ -2,20 +2,6 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "_artifactsLocation": {
-            "metadata": {
-                "description": "Artifacts location"
-            },
-            "defaultValue": "https://raw.githubusercontent.com/Azure/azure-devops-utils/v0.28.1/",
-            "type": "string"
-        },
-        "_artifactsLocationSasToken": {
-            "metadata": {
-                "description": "Artifacts Sas token"
-            },
-            "defaultValue": "",
-            "type": "string"
-        },
         "adminPassword": {
             "metadata": {
                 "description": "Password for the Virtual Machine. Will be used only if authenticationType is 'password'"
@@ -72,19 +58,20 @@
     },
     "variables": {
         "authenticationType": "password",
+        "publicIPNewOrExisting": "new",
         "jenkinsReleaseType": "LTS",
         "_extensionScript": "install_jenkins.sh",
         "storageAccountType": "Standard_LRS",
         "frontEndNSGName": "[concat(parameters('vmName'), 'NSG')]",
-        "nestedUrl": "[concat(parameters('_artifactsLocation'),'/solution_template/nested')]",
+        "nestedUrl": "[concat(parameters('location'),'/solution_template/nested')]",
         "nicName": "[concat(parameters('vmName'), 'VMNic')]",
         "publicIPAddressName": "myPublicIPD",
         "publicIPAddressType": "Dynamic",
-        "publicIPDeploymentName": "[concat(parameters('publicIPName'), '-publicIP-deploy')]",
+        "publicIPDeploymentName": "[concat(parameters('vmName'), '-publicIP-deploy')]",
         "subnetName": "[concat(parameters('vmName'), 'Subnet')]",
         "subnetPrefix": "10.0.0.0/24",
-        "templateUrlIP": "[concat(variables('nestedUrl'),'/publicIP-',parameters('publicIPNewOrExisting'),'.json',parameters('_artifactsLocationSasToken'))]",
-        "templateUrlVM": "[concat(variables('nestedUrl'),'/VM-new-',parameters('authenticationType'),'.json',parameters('_artifactsLocationSasToken'))]",
+        "templateUrlIP": "[concat(variables('nestedUrl'),'/publicIP-',variables('publicIPNewOrExisting'),'.json')]",
+        "templateUrlVM": "[concat(variables('nestedUrl'),'/VM-new-',variables('authenticationType'),'.json'))]",
         "ubuntuSku": "16.04-LTS",
         "virtualNetworkName": "[concat(parameters('vmName'), 'VNET')]",
         "virtualNetworkPrefix": "10.0.0.0/16",
@@ -192,7 +179,7 @@
                             "privateIpAddress": "[variables('vmPrivateIP')]",
                             "privateIPAllocationMethod": "Static",
                             "publicIPAddress": {
-                                "id": "[resourceId(parameters('publicIPResourceGroup'),'Microsoft.Network/publicIPAddresses', parameters('publicIPName'))]"
+                                "id": "[resourceId(parameters('resourceGroupName'),'Microsoft.Network/publicIPAddresses', variables('publicIPName'))]"
                             },
                             "subnet": {
                                 "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName')),'/subnets/',variables('subnetName'))]"
@@ -229,7 +216,7 @@
                         "value": "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"
                     },
                     "storageAccountType": {
-                        "value": "[parameters('storageAccountType')]"
+                        "value": "[variables('storageAccountType')]"
                     },
                     "ubuntuSku": {
                         "value": "[variables('ubuntuSku')]"
@@ -266,7 +253,7 @@
                 "publisher": "Microsoft.Azure.Extensions",
                 "settings": {
                     "fileUris": [
-                        "[concat(parameters('_artifactsLocation'), '/jenkins/', variables('_extensionScript'), parameters('_artifactsLocationSasToken'))]"
+                        "[concat(parameters('_artifactsLocation'), '/jenkins/', variables('_extensionScript'), parameters('location')]"
                     ]
                 },
                 "type": "CustomScript",
