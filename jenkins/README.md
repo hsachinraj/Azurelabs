@@ -92,7 +92,7 @@ Since Maven plugin is not automatically installed by default starting from Jenki
 
     ![Configuring VSTS Git URL](images/jenkins-vstsrepo.png)
 
-    VSTS Git repos are private. So you will need to provide the credentials to access the repository. If you have not set the Git crednetials, you can do it from VSTS
+    **Note:** VSTS Git repos are private. So you will need to provide the credentials to access the repository. If you have not set the Git crednetials, you can do it from VSTS
     ![Generating Git Credentials](images/vsts-generategitcreds.png)
     
 1. Select **Add | Jenkins** to add a new credential. Save the user name and password and click **Add** to close the wizard
@@ -110,7 +110,13 @@ Since Maven plugin is not automatically installed by default starting from Jenki
 1. Click **Save** to naviagate to the main page of the project you just created
     ![Build Settings in Jenkins](images/jenkins-buildsettings.png)
 
-1. Select **Build Now** to start an Ad-hoc build
+1. The last configuration that we will do for this lab is to add a *Post-build* action to publish the artifacts. Scroll down to **Post-Build Actions**  section, click **Add post-build action** and select **Archieve the artifacts**
+    ![Post Build Action](images/jenkinspostbuildaction.png)
+
+1. Enter  **target/*.war** in the text box. Click **Save** to save the settings and return to the project page
+    ![Archive War](images/jenkinsarchiveartifacts.png)
+
+1. We have completed all the necessary configuration and Select **Build Now** to start an Ad-hoc build
 
 1. You will notice the build progress just below the left side navigation menu
     ![Running Ad-hoc Build](images/adhocbuild.png)
@@ -164,11 +170,30 @@ You can Visual Studio Team Services Release Management to fetch the artifacts fr
 2. Provide the server URL and the user name and password (the credentials you provided for the first admin user). The server URL is in http://[server IP address or DNS name] format. Click **Verify Copnnection** to validate the entries and to confirm that VSTS is able to reach the Jenkins server
     ![Jenkins Endpoint](images/jenkinsendpoint.png)
 
-1. Create a new Azure endpoint
+    You are now ready to create a new release definition. 
 
-1. Once you the have the endpoints configured, you can create a new release defintion. Select the **Build & Release** hub and select **+ Create a new Release defintion**
+1. Select the **Build & Release** hub and select **+ Create a new Release defintion** to start creating a new release definition
 
-2. 
+1. We will use the **Azure App Service Deployment** template as we are trying to publish a web application
+    ![New Release Defintion](images/newreleasedefintion.png)
+
+1. We will name the default environment as **Dev**
+    ![New Environment](images/rm_environment.png)
+
+1. We will link this relase definition to the MyShuttle build on Jenkins. Select **+Add** to add an artifact
+
+1. Select **Jenkins** for the *Source type*. Select the Jenkins endpoint you created above and enter **MyShuttle** for the *Source(Job)* - Note this should map to the project name that you have configured in Jenkins
+
+1. If you have configured Jenkins server and the source corectly, you will get a message showing the output of the build, in this case it should be ***myshuttledev.war***
+    ![Add Jenkins artifact](images/rm_addjenkinsartifact.png)
+
+1. We are now ready to deploy!
+
+1. You can refer to the [Deploying Tomcat+MySQL application to Azure with VSTS]() if you want to continue with the deployment.
+
+## Feedback
+
+
 
 
 
