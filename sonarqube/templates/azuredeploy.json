@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.1.0.0",
     "parameters": {
-        "sqVM_AppName": {
+        "SQ_VM_Name": {
             "type": "string",
             "defaultValue": "sonarqubevm",
             "minLength": 1,
@@ -10,7 +10,7 @@
                 "description": "Name of the VM that SonarQube will be installed upon"
             }
         },
-        "sq_PublicIP_DnsPrefix": {
+        "SQ_DNS_NAME": {
             "type": "string",
             "minLength": 1,
             "maxLength": 32,
@@ -18,27 +18,27 @@
                 "description": "The prefix of the public URL for the VM on the Internet. It should be unique across all Azure and match with the following regular expression: ^[a-z][a-z0-9-]{1,61}[a-z0-9]$ or it will raise an error."
             }
         },
-        "sqVM_AppAdmin_UserName": {
+        "SQ_VM_UserName": {
             "type": "string",
             "minLength": 1,
             "metadata": {
                 "description": "Admin account name for the SonarQube VM"
             }
         },
-        "sqVM_AppAdmin_Password": {
+        "SQ_VM_UserPassword": {
             "type": "securestring",
             "metadata": {
                 "description": "Password for the SonarQube VM Admin account"
             }
         },
-        "sqDB_Admin_UserName": {
+        "SQ_DBAdmin_UserName": {
             "type": "string",
             "minLength": 1,
             "metadata": {
                 "description": "Admin account name for Azure SQL Server"
             }
         },
-        "sqDB_Admin_Password": {
+        "SQ_DBAdmin_Password": {
             "type": "securestring",
             "metadata": {
                 "description": "Password for Azure SQL Server Admin account"
@@ -76,7 +76,7 @@
         "SQvmAppVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'SQvnet')]",
         "SQvmAppSubnetRef": "[concat(variables('SQvmAppVnetID'), '/subnets/', variables('SQvnetExternalSubnetName'))]",
         "SQvmAppStorageAccountContainerName": "vhds",
-        "SQvmAppNicName": "[concat(parameters('sqVM_AppName'), 'NetworkInterface')]",
+        "SQvmAppNicName": "[concat(parameters('SQ_VM_Name'), 'NetworkInterface')]",
         "SQpublicIPName": "SQpublicIP",
         "dscZipFile": "SQdscAppConfiguration.ps1.zip",
         "SQdscAppConfigurationFunction": "SQdscAppConfiguration.ps1\\Main",
@@ -97,10 +97,10 @@
                 },
                 "parameters": {
                     "adminLogin": {
-                        "value": "[parameters('sqDB_Admin_UserName')]"
+                        "value": "[parameters('SQ_DBAdmin_UserName')]"
                     },
                     "adminPassword": {
-                        "value": "[parameters('sqDB_Admin_Password')]"
+                        "value": "[parameters('SQ_DBAdmin_Password')]"
                     },
                     "sonarSqlName": {
                         "value": "[variables('AzureSqlServerName')]"
@@ -183,7 +183,7 @@
             }
         },
         {
-            "name": "[parameters('sqVM_AppName')]",
+            "name": "[parameters('SQ_VM_Name')]",
             "type": "Microsoft.Compute/virtualMachines",
             "location": "[resourceGroup().location]",
             "apiVersion": "2015-06-15",
@@ -199,9 +199,9 @@
                     "vmSize": "[variables('SQvmAppVmSize')]"
                 },
                 "osProfile": {
-                    "computerName": "[parameters('sqVM_AppName')]",
-                    "adminUsername": "[parameters('sqVM_AppAdmin_UserName')]",
-                    "adminPassword": "[parameters('sqVM_AppAdmin_Password')]"
+                    "computerName": "[parameters('SQ_VM_Name')]",
+                    "adminUsername": "[parameters('SQ_VM_UserName')]",
+                    "adminPassword": "[parameters('SQ_VM_UserPassword')]"
                 },
                 "storageProfile": {
                     "imageReference": {
@@ -231,7 +231,7 @@
                     "location": "[resourceGroup().location]",
                     "apiVersion": "2015-06-15",
                     "dependsOn": [
-                        "[concat('Microsoft.Compute/virtualMachines/', parameters('sqVM_AppName'))]"
+                        "[concat('Microsoft.Compute/virtualMachines/', parameters('SQ_VM_Name'))]"
                     ],
                     "properties": {
                         "publisher": "Microsoft.Powershell",
@@ -242,10 +242,10 @@
                             "modulesUrl": "[concat(variables('SQDSCFileLocation'), '/', variables('dscZipFile'))]",
                             "configurationFunction": "[variables('SQdscAppConfigurationFunction')]",
                             "properties": {
-                                "nodeName": "[parameters('sqVM_AppName')]",
-                                "sqVM_AppAdmin_UserName": "[parameters('sqVM_AppAdmin_UserName')]",
-                                "connectionString": "[replace(reference('deploySQLDB').outputs.jdbcConnString.value,'{your_password_here}',parameters('sqDB_Admin_Password'))]",
-                                "sqVmAdminPwd": "[parameters('sqVM_AppAdmin_Password')]",
+                                "nodeName": "[parameters('SQ_VM_Name')]",
+                                "sqVM_AppAdmin_UserName": "[parameters('SQ_VM_UserName')]",
+                                "connectionString": "[replace(reference('deploySQLDB').outputs.jdbcConnString.value,'{your_password_here}',parameters('SQ_DBAdmin_Password'))]",
+                                "sqVmAdminPwd": "[parameters('SQ_VM_UserPassword')]",
                                 "sqLtsVersion": "sonarqube-5.6.4"
                             }
                         },
@@ -258,8 +258,8 @@
                     "location": "[resourceGroup().location]",
                     "apiVersion": "2015-06-15",
                     "dependsOn": [
-                        "[concat('Microsoft.Compute/virtualMachines/', parameters('sqVM_AppName'))]",
-                        "[concat('Microsoft.Compute/virtualMachines/', parameters('sqVM_AppName'),'/extensions/configureAppVM_DSC')]"
+                        "[concat('Microsoft.Compute/virtualMachines/', parameters('SQ_VM_Name'))]",
+                        "[concat('Microsoft.Compute/virtualMachines/', parameters('SQ_VM_Name'),'/extensions/configureAppVM_DSC')]"
                     ],
                     "tags": {
                         "displayName": "secureSonarQube"
@@ -296,7 +296,7 @@
             "properties": {
                 "publicIPAllocationMethod": "Dynamic",
                 "dnsSettings": {
-                    "domainNameLabel": "[parameters('sq_PublicIP_DnsPrefix')]"
+                    "domainNameLabel": "[parameters('SQ_DNS_NAME')]"
                 }
             }
         },
