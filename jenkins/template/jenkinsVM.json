@@ -2,20 +2,6 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "_artifactsLocation": {
-            "metadata": {
-                "description": "Artifacts location"
-            },
-            "defaultValue": "https://raw.githubusercontent.com/Azure/azure-devops-utils/v0.28.1/",
-            "type": "string"
-        },
-        "_artifactsLocationSasToken": {
-            "metadata": {
-                "description": "Artifacts Sas token"
-            },
-            "defaultValue": "",
-            "type": "string"
-        },
         "adminPassword": {
             "metadata": {
                 "description": "Password for the Virtual Machine. Will be used only if authenticationType is 'password'"
@@ -40,36 +26,12 @@
             "metadata": {
                 "description": "Authentication type (can be 'password' or 'sshPublicKey')"
             },
-            "type": "string"
+            "type": "string",
+            "defaultValue": "password"
         },
         "dnsPrefix": {
             "metadata": {
                 "description": "Unique DNS Name for the Public IP used to access the Jenkins Virtual Machine."
-            },
-            "type": "string"
-        },
-        "publicIPName": {
-            "metadata": {
-                "description": "Public IP name"
-            },
-            "type": "string"
-        },
-        "publicIPNewOrExisting": {
-            "metadata": {
-                "description": "Should be 'new' if the public IP has to be created"
-            },
-            "type": "string"
-        },
-        "publicIPResourceGroup": {
-            "metadata": {
-                "description": "The Public IP Resource Group"
-            },
-            "type": "string"
-        },
-        "storageAccountType": {
-            "defaultValue": "Standard_LRS",
-            "metadata": {
-                "description": "Storage Account Type"
             },
             "type": "string"
         },
@@ -83,7 +45,8 @@
             "metadata": {
                 "description": "Virtual Machine Size"
             },
-            "type": "string"
+            "type": "string",
+            "defaultValue": "DS2_V2"
         },
         "location": {
             "metadata": {
@@ -91,25 +54,22 @@
             },
             "type": "string",
             "defaultValue": "[resourceGroup().location]"
-        },
-        "jenkinsReleaseType": {
-            "metadata": {
-                "description": "Jenkins release type (LTS or weekly or verified)"
-            },
-            "type": "string",
-            "defaultValue": "LTS"
         }
     },
     "variables": {
+        "authenticationType": "password",
+        "publicIPNewOrExisting": "new",
+        "jenkinsReleaseType": "LTS",
         "_extensionScript": "install_jenkins.sh",
+        "storageAccountType": "Standard_LRS",
         "frontEndNSGName": "[concat(parameters('vmName'), 'NSG')]",
-        "nestedUrl": "[concat(parameters('_artifactsLocation'),'/solution_template/nested')]",
+        "nestedUrl": "[concat(parameters('location'),'/solution_template/nested')]",
         "nicName": "[concat(parameters('vmName'), 'VMNic')]",
-        "publicIPDeploymentName": "[concat(parameters('publicIPName'), '-publicIP-deploy')]",
+        "publicIPAddressName": "myPublicIPD",
+        "publicIPAddressType": "Dynamic",
+        "publicIPDeploymentName": "[concat(parameters('vmName'), '-publicIP-deploy')]",
         "subnetName": "[concat(parameters('vmName'), 'Subnet')]",
         "subnetPrefix": "10.0.0.0/24",
-        "templateUrlIP": "[concat(variables('nestedUrl'),'/publicIP-',parameters('publicIPNewOrExisting'),'.json',parameters('_artifactsLocationSasToken'))]",
-        "templateUrlVM": "[concat(variables('nestedUrl'),'/VM-new-',parameters('authenticationType'),'.json',parameters('_artifactsLocationSasToken'))]",
         "ubuntuSku": "16.04-LTS",
         "virtualNetworkName": "[concat(parameters('vmName'), 'VNET')]",
         "virtualNetworkPrefix": "10.0.0.0/16",
@@ -123,21 +83,7 @@
             "name": "[variables('publicIPDeploymentName')]",
             "properties": {
                 "mode": "Incremental",
-                "parameters": {
-                    "publicIPName": {
-                        "value": "[parameters('publicIPName')]"
-                    },
-                    "publicIPLocation": {
-                        "value": "[parameters('location')]"
-                    },
-                    "dnsPrefix": {
-                        "value": "[parameters('dnsPrefix')]"
-                    },
-                    "publicIPResourceGroup": {
-                        "value": "[parameters('publicIPResourceGroup')]"
-                    }
-                },
-                "templateLink": {
+               "templateLink": {
                     "contentVersion": "1.0.0.0",
                     "uri": "[variables('templateUrlIP')]"
                 }
@@ -231,7 +177,7 @@
                             "privateIpAddress": "[variables('vmPrivateIP')]",
                             "privateIPAllocationMethod": "Static",
                             "publicIPAddress": {
-                                "id": "[resourceId(parameters('publicIPResourceGroup'),'Microsoft.Network/publicIPAddresses', parameters('publicIPName'))]"
+                                "id": "[resourceId(parameters('resourceGroupName'),'Microsoft.Network/publicIPAddresses', variables('publicIPName'))]"
                             },
                             "subnet": {
                                 "id": "[concat(resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName')),'/subnets/',variables('subnetName'))]"
@@ -268,7 +214,7 @@
                         "value": "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"
                     },
                     "storageAccountType": {
-                        "value": "[parameters('storageAccountType')]"
+                        "value": "[variables('storageAccountType')]"
                     },
                     "ubuntuSku": {
                         "value": "[variables('ubuntuSku')]"
@@ -305,7 +251,7 @@
                 "publisher": "Microsoft.Azure.Extensions",
                 "settings": {
                     "fileUris": [
-                        "[concat(parameters('_artifactsLocation'), '/jenkins/', variables('_extensionScript'), parameters('_artifactsLocationSasToken'))]"
+                        "[concat(parameters('_artifactsLocation'), '/jenkins/', variables('_extensionScript'), parameters('location')]"
                     ]
                 },
                 "type": "CustomScript",
