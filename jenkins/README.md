@@ -32,11 +32,13 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
     </a>
  
 1. Once the machine is provisioned, click **Connect** and note down the \<username> and \<ip address>. We will need this to connect to the VM from ***Putty***
+
     ![SSH Connection Info](images/vmconnect_ssh1.png)
 
-1. Open a command prompt and type the following command
-    > putty.exe -ssh -L 8080:localhost:8080 \<username>@\<ip address>
-
+1. You will notice that by default the instance listens on port 8080 using HTTP. If you want to set up HTTPS communication, you will need to provide an SSL certificate. If you do not setup HTTPS communication, the best way to make sure the sign-in credentials are not leaked due to a "Man-in-the-middle" attack is to only log in using SSH tunneling. An SSH tunnel is an encrypted tunnel created through an SSH protocol connection, which can be used to transfer unencrypted traffic over an unsecured network. Simply run this command
+    ````
+    putty.exe -ssh -L 8080:localhost:8080 \<username>@\<ip address>
+    ````
     ![Connecting from Putty](images/ssh2.png)
 
 1. Login with the user name and password that you provided when you provisioned the VM.
@@ -70,7 +72,7 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
 
 ## Installing and configuring Maven
 
- Maven plugin is not automatically installed by default starting from Jenkins version 2. We will need to do this manually
+ Starting from Jenkins version 2, Maven plugin is not installed by default.  You will need to do this manually
 
 1. Select **Manage Jenkins** on the main page of the Jenkins portal.  This will take you to the Manage Jenkins page, the central one-stop-shop for all your Jenkins configuration. From this screen, you can configure your Jenkins server, install and upgrade plugins, keep track of system load, manage distributed build servers, and more! 
 
