@@ -2,7 +2,7 @@
 
 [Jenkins](https://jenkins.io/) is a very popular Java based, open source continuous integration server that allows teams to continuously build applications across platforms.
 
-Visual Studio Team Services(VSTS) includes Team Build,a native CI build server that runs on Windows, Linux and Mac and allows building any application on these platform. Yet, teams if they are already using or prefer to use Jenkins for CI, they can continue to use it with VSTS for source control and release management.
+Visual Studio Team Services(VSTS) includes Team Build,a native CI build server that runs on Windows, Linux and Mac and allows building any application on these platform. However, it also integrates well with Jenkins for teams who prefer to use Jenkins for CI. 
 
 This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we will see how you can
  * Provision Jenkins on Azure with a Azure Marketplace Template VM
