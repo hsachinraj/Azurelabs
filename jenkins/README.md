@@ -56,9 +56,9 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
 1. Back in the browser, paste the text and select **Continue**
     ![Unlock Jenkins - First Time](images/Jenkinsinitialpwd.png)
 
-    Next we will choose the plug-ins to install. Jenkins has a large ecosystem with a strong and active open source community users contributing several hundreds of useful plugins. When you setup Jenkins, you can start with installing the most commonly used plugins or select and install the ones that you want.
+    Next you need to choose the plug-ins to install. Jenkins has a large ecosystem with a strong and active open source community users contributing several hundreds of useful plugins. When you setup Jenkins, you can start with installing the most commonly used plugins or select and install the ones that you want.
 
-1. We will need the Maven plug-in which is not installed by default but we will do it later. For now, we will go with the suggested plugins. Select **Install suggested plugin**
+1. You will need the Maven plug-in which is not installed by default but we will do it later. For now, we will go with the suggested plugins. Select **Install suggested plugin**
 
     ![Customize Jenkins Plugins](images/customizejenkins-plugins.png)
     
@@ -90,7 +90,7 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
 
     ![Global Tool Configuration](images/manage-tools-config.png)
 
-1.  We have added the Maven plugin for Jenkins but we have not installed Maven on the machine. Jenkins provides great out-of-the-box support for Maven.  We could  manually install Maven by extracting the ***tar*** file located in a shared folder. Alternatively, we can let Jenkins do all the hardwork and download Maven for you. Select the **Install automatically** checkbox. Jenkins will download and install Maven from the Apache website the first time a build job needs it. 
+1.  You have added the Maven plugin for Jenkins but you have not installed Maven on the machine. Jenkins provides great out-of-the-box support for Maven.  You could  manually install Maven by extracting the ***tar*** file located in a shared folder. Alternatively, you can let Jenkins do all the hardwork and download Maven for you. Select the **Install automatically** checkbox. Jenkins will download and install Maven from the Apache website the first time a build job needs it. 
 
     We will install version 3.5, the latest version at the time the lab is written
 
@@ -140,7 +140,7 @@ This lab shows how you can integrate Team Servcies and Jenkins. In this lab, we 
     ![Build Details](images/builddetails.png)
     ![Build Artifacts](images/buildmodules.png)
 
-1. Select the **Test Results** links if you want to see the results of the unit tests that we included in the build defintion. 
+1. Select the **Test Results** links if you want to see the results of the unit tests that were included in the build defintion. 
 
 ## Configuring the build as Continuous Integration
 
@@ -180,7 +180,7 @@ Now you can try making a change and commit your code. Upon commit, VSTS will not
 
 You can Visual Studio Team Services Release Management to fetch the artifacts from the Jenkins server and deploy them. In this exercise below, we will configure VSTS to deploy the WAR file to Azure Web App Service. 
 
-1. First, we will need to create an endpoint to Azure and the Jenkis server. From the **Admin | Services** tab, select the **New Service Endpoint | Jenkins** button to create a new endpoint
+1. First, you will need to create an endpoint to Azure and the Jenkis server. From the **Admin | Services** tab, select the **New Service Endpoint | Jenkins** button to create a new endpoint
 
 2. Provide the server URL and the user name and password (the credentials you provided for the first admin user). The server URL is in http://[server IP address or DNS name] format. Click **Verify Copnnection** to validate the entries and to confirm that VSTS is able to reach the Jenkins server
     ![Jenkins Endpoint](images/jenkinsendpoint.png)
@@ -202,7 +202,7 @@ You can Visual Studio Team Services Release Management to fetch the artifacts fr
 1. If you have configured Jenkins server and the source corectly, you will get a message showing the output of the build, in this case it should be ***myshuttledev.war***
     ![Add Jenkins artifact](images/rm_addjenkinsartifact.png)
 
-1. We are now ready to deploy!
+1. You are now ready to deploy!
 
 1. You can refer to the [Deploying Tomcat+MySQL application to Azure with VSTS]() if you want to continue with the deployment.
 
