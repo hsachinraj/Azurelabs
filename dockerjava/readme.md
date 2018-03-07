@@ -12,9 +12,10 @@ In this lab, you will learn how you can setup a Continuous Delivery pipeline to 
 
 This lab will show how you can
 
-* Create a new Azure App Service and configure it to use Apache Tomcat
+* Create a new Azure Container Registry to store and manage your Docker container images
+* Create an Azure web app to host a container
 * Create a new MySQL database
-* Use Azure App Service Task to deploy a WAR file
+* Use Azure App Service Task to deploy image to container
 
 ### Prerequisites for the lab
 
@@ -46,12 +47,14 @@ Next, you will create a Team services project to establish a repository for sour
 
     ![New Project](images/createproject.png)
 
-1. This should create an empty project. Next, you will add code to the project. Team Services supports **Git** 
+1. This should create an empty project. Next, you will add code to the project. Team Services supports **Git**. Navigate to the **Code** tab, click on **Copy push commands to clipboard** and save the commands to notepad. We will need this commands later in this exercise.
+     
+      ![copypushcommands](images/copypushcommands.png)
 
 1. Open a **Terminal** window and enter the following command to change the current working directory
 
     ````bash
-    cd \home\vmadmin\myshuttledocker
+    cd \home\eclipsevm\myshuttledocker
     ````
 
 1. Next initialize a git repo in the current folder
@@ -62,6 +65,13 @@ Next, you will create a Team services project to establish a repository for sour
     ````bash
     git add .
     ````
+1. Git uses a username to associate commits with an identity. Run the following commands to associate your identity with your Git commits.
+ 
+   ````bash
+    git config --global user.email "YourEmailID"
+    git config --global user.name "YourName"
+    ````
+    > Replace  **YourEmailID** & **YourName** with your VSTS email id and your name
 1. Commit the files that you've staged in your local repository.
 
     ````
@@ -115,7 +125,7 @@ Next you will build a CI/CD pipeline in Team Services that will build and push t
 
 1. Select the **Build** hub. Click the **+ New definition**  button to create a new build definition. 
 
-1. Make sure **VSTS Git** is selected for the source and the project, repository and branch have the correct values.  Select **Continue**
+1. Make sure **VSTS Git** is selected for the source and the project, repository and branch have the correct values.  Select **Continue**.
 
 1. Select **Maven** for the template as we are building a Java application using Maven
 
@@ -123,7 +133,7 @@ Next you will build a CI/CD pipeline in Team Services that will build and push t
 
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
-    | Options | `-Dtest=SimpleTest,FaresTest` | runs specific (unit)tests during the build |
+    | Options | `-DskipITs --settings ./maven/settings.xml` | runs specific (unit)tests during the build |
     |Code Coverage Tool | JaCoCo | Selects JaCoCo as the coverage tool |
     | Source Files Directory | `src/main` | Sets the source files directory for JaCoCo |
 
@@ -134,7 +144,7 @@ Next you will build a CI/CD pipeline in Team Services that will build and push t
     | Parameter | Value | Notes |
     | --------------- | ---------------------------- | ----------------------------------------------------------- |
     | Source Folder | `$(build.sourcesdirectory)` | |
-    |Contents | `target/myshuttledev\*.war |the WAR file to copy  |
+    |Contents | target/myshuttledev\*.war |the WAR file to copy  |
     | Target Folder | `$(build.artifactstagingdirectory)` | Target folder to copy to |
 
 
@@ -152,9 +162,11 @@ Next you will build a CI/CD pipeline in Team Services that will build and push t
     | Additional Image Tags | `$(Build.BuildNumber)` | Sets a unique tag for each instance of the build |
     | Include Latest Tag | Check (set to true) | Adds the `latest` tag to the images produced by this build |
 
+   ![Maven task settings](images/vsts-mavensettings2.png)
+
 1. Select the other  **Docker Compose** task you added and provide the same settings (you can also right-click the previous tasks and select *clone* ). Change the **Action** to **Push Service Images**. This action will instruct the task to push the container image to a container registry
 
-      ![Maven task settings](images/vsts-mavensettings2.png)
+      
 
 1. The build definition is complete and is ready to run. You will need to specify a build agent to execute this. You will use a hosted Linux agent. Select the **Process** section and choose **Hosted Linux Preview** for the Agent queue.
 
